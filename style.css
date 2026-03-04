@@ -388,7 +388,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   gap: 0.25rem;
 }
-.product-features li::before { content: "•"; color: var(--color-accent); margin-right: 0.4rem; }
+.product-features li::before { content: "\2022";
+color: var(--color-accent); margin-right: 0.4rem; }
 
 /* ── AVANTAGES ── */
 .section-benefits {
@@ -447,7 +448,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   gap: 0.25rem;
 }
-.contact-bullets li::before { content: "—"; margin-right: 0.3rem; color: var(--color-gold); }
+.contact-bullets li::before { content: "\2014";
+margin-right: 0.3rem; color: var(--color-gold); }
 
 /* ── FOOTER ── */
 .site-footer {
