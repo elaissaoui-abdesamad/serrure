@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditions Générales de Vente – Elactronics</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal-page { padding: 4rem 0 5rem; }
+    .legal-page h1 { font-size: 1.8rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+    .legal-page .subtitle { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 2.5rem; }
+    .legal-section { margin-bottom: 2rem; }
+    .legal-section h2 { font-size: 1rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 0.6rem; }
+    .legal-section p, .legal-section li { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.7; margin: 0 0 0.4rem; }
+    .legal-section ul { list-style: none; padding: 0; }
+    .legal-section ul li::before { content: "—"; margin-right: 0.5rem; color: var(--color-gold); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <span class="brand-name">Elactronics</span>
+          <span class="brand-sub">Serrures électroniques</span>
+        </span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#produits">Produits</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container legal-page">
+      <a href="index.html" class="back-link">← Retour au site</a>
+      <h1>Conditions Générales de Vente</h1>
+      <p class="subtitle">Dernière mise à jour : juin 2025</p>
+
+      <div class="legal-section">
+        <h2>1. Objet</h2>
+        <p>Les présentes Conditions Générales de Vente (CGV) régissent les relations commerciales entre Elactronics (EL AISSAOUI Abdesamad, auto-entrepreneur, ICE 003865218000056, Bouznika, Maroc) et tout client passant commande via le site ou par WhatsApp.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Produits et services</h2>
+        <p>Elactronics commercialise des serrures électroniques et propose leur installation à domicile au Maroc. Les prix affichés sur le site sont en dirhams marocains (DH) et incluent l'installation professionnelle.</p>
+        <p>Elactronics se réserve le droit de modifier ses prix à tout moment. Le prix applicable est celui en vigueur au moment de la confirmation de commande.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Commande</h2>
+        <p>La commande est confirmée après échange par WhatsApp et accord sur le modèle, le prix et la date d'installation. Aucune commande n'est définitive sans confirmation explicite des deux parties.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Paiement</h2>
+        <ul>
+          <li>Virement bancaire avant ou après installation selon accord</li>
+          <li>Espèces à la date d'installation</li>
+        </ul>
+        <p>Le paiement intégral est dû au plus tard à la date d'installation. Aucune installation ne sera réalisée sans confirmation du mode de paiement.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Installation</h2>
+        <p>L'installation est réalisée par Elactronics dans un délai convenu lors de la commande. Le client s'assure que la porte est compatible avec la serrure choisie. En cas d'incompatibilité constatée sur place, une solution alternative sera proposée.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>6. Retours et remboursements</h2>
+        <p>Le client dispose de <strong style="color:var(--color-text)">8 jours</strong> à compter de la date d'installation pour signaler tout défaut ou demander un retour, sous réserve que :</p>
+        <ul>
+          <li>La serrure soit dans son état d'origine, non endommagée</li>
+          <li>Le défaut ne soit pas dû à une mauvaise utilisation</li>
+          <li>La demande soit formulée par écrit (WhatsApp ou message)</li>
+        </ul>
+        <p>En cas de retour accepté, Elactronics procédera au remplacement du produit ou au remboursement selon accord mutuel. Les frais de déplacement pour retrait peuvent être applicables.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>7. Garantie</h2>
+        <p>Tous les produits vendus par Elactronics bénéficient d'une <strong style="color:var(--color-text)">garantie SAV de 2 ans</strong> à compter de la date d'installation. Cette garantie couvre les défauts de fabrication et les pannes en utilisation normale.</p>
+        <p>La garantie ne couvre pas les dommages causés par une mauvaise utilisation, un choc, une tentative d'effraction ou une usure normale.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>8. Responsabilité</h2>
+        <p>Elactronics ne saurait être tenu responsable des dommages indirects liés à l'utilisation ou la défaillance du produit. La responsabilité d'Elactronics est limitée au montant de la commande concernée.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>9. Droit applicable</h2>
+        <p>Les présentes CGV sont soumises au droit marocain. En cas de litige, les parties s'engagent à rechercher une solution amiable avant tout recours judiciaire.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a> |
+        <a href="cgv.html">CGV</a> |
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </div>
+      <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
