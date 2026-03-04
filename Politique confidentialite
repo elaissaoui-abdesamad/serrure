@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité – Elactronics</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal-page { padding: 4rem 0 5rem; }
+    .legal-page h1 { font-size: 1.8rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+    .legal-page .subtitle { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 2.5rem; }
+    .legal-section { margin-bottom: 2rem; }
+    .legal-section h2 { font-size: 1rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 0.6rem; }
+    .legal-section p, .legal-section li { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.7; margin: 0 0 0.4rem; }
+    .legal-section ul { list-style: none; padding: 0; }
+    .legal-section ul li::before { content: "—"; margin-right: 0.5rem; color: var(--color-gold); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <span class="brand-name">Elactronics</span>
+          <span class="brand-sub">Serrures électroniques</span>
+        </span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#produits">Produits</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container legal-page">
+      <a href="index.html" class="back-link">← Retour au site</a>
+      <h1>Politique de confidentialité</h1>
+      <p class="subtitle">Dernière mise à jour : juin 2025</p>
+
+      <div class="legal-section">
+        <h2>1. Responsable du traitement</h2>
+        <p>EL AISSAOUI Abdesamad, auto-entrepreneur sous le nom commercial Elactronics, ICE 003865218000056, Bouznika, Maroc. Contact : via WhatsApp au +33 6 25 28 70 70 ou Instagram @elactronics.ma.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Données collectées</h2>
+        <p>Ce site ne collecte aucune donnée personnelle directement. Aucun formulaire, cookie de tracking ou outil d'analyse n'est utilisé.</p>
+        <p>Dans le cadre d'une commande via WhatsApp, les informations suivantes peuvent être échangées :</p>
+        <ul>
+          <li>Nom et prénom</li>
+          <li>Numéro de téléphone</li>
+          <li>Adresse d'installation</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Finalité du traitement</h2>
+        <p>Les données collectées lors d'une commande sont utilisées uniquement pour :</p>
+        <ul>
+          <li>Confirmer et organiser l'installation</li>
+          <li>Assurer le suivi SAV et la garantie</li>
+          <li>Répondre aux demandes de contact</li>
+        </ul>
+        <p>Aucune donnée n'est vendue, partagée ou transmise à des tiers à des fins commerciales.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Durée de conservation</h2>
+        <p>Les données sont conservées pendant la durée de la garantie (2 ans) puis supprimées, sauf obligation légale contraire.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Hébergement et services tiers</h2>
+        <p>Ce site est hébergé par GitHub Pages (GitHub, Inc., San Francisco, États-Unis). Les liens WhatsApp et Instagram présents sur le site redirigent vers des plateformes tierces soumises à leurs propres politiques de confidentialité.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>6. Vos droits</h2>
+        <p>Conformément à la loi marocaine n°09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez des droits suivants :</p>
+        <ul>
+          <li>Droit d'accès à vos données</li>
+          <li>Droit de rectification</li>
+          <li>Droit de suppression</li>
+          <li>Droit d'opposition au traitement</li>
+        </ul>
+        <p>Pour exercer ces droits, contactez-nous via WhatsApp au +33 6 25 28 70 70.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>7. Cookies</h2>
+        <p>Ce site n'utilise aucun cookie de tracking ou publicitaire. Aucune bannière de consentement n'est donc nécessaire.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a> |
+        <a href="cgv.html">CGV</a> |
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </div>
+      <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
