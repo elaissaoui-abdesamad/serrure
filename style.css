@@ -966,3 +966,15 @@ a { color: inherit; text-decoration: none; }
 .hero-actions {
   margin-bottom: 1.8rem;
 }
+
+.section-contact {
+  padding-bottom: 5rem;
+}
+
+.contact-card {
+  margin-bottom: 2rem;
+}
+
+.site-footer {
+  margin-top: 2rem;
+}
