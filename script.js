@@ -12,7 +12,6 @@ if (toggle && nav) {
     toggle.setAttribute('aria-expanded', open);
   });
 
-  // Ferme le menu au clic sur un lien
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggle.classList.remove('open');
@@ -21,7 +20,6 @@ if (toggle && nav) {
     });
   });
 
-  // Ferme le menu au clic en dehors
   document.addEventListener('click', (e) => {
     if (!toggle.contains(e.target) && !nav.contains(e.target)) {
       toggle.classList.remove('open');
@@ -44,3 +42,36 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 revealEls.forEach(el => observer.observe(el));
+
+// ── FAB éventail ──
+const fabContainer = document.getElementById('fabContainer');
+const fabMain = document.getElementById('fabMain');
+
+if (fabMain && fabContainer) {
+  const overlay = document.createElement('div');
+  overlay.className = 'fab-overlay';
+  document.body.appendChild(overlay);
+
+  const openFab = () => {
+    fabContainer.classList.add('is-open');
+    fabMain.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('active');
+  };
+
+  const closeFab = () => {
+    fabContainer.classList.remove('is-open');
+    fabMain.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('active');
+  };
+
+  fabMain.addEventListener('click', (e) => {
+    e.stopPropagation();
+    fabContainer.classList.contains('is-open') ? closeFab() : openFab();
+  });
+
+  overlay.addEventListener('click', closeFab);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeFab();
+  });
+}
