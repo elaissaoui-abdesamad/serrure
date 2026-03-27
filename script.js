@@ -38,18 +38,10 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 revealEls.forEach(el => observer.observe(el));
 
-// ── FAB WhatsApp/Tel ──
+// ── FAB → WhatsApp direct ──
 const fabMain = document.getElementById('fabMain');
-const fabContainer = document.getElementById('fabContainer');
-if (fabMain && fabContainer) {
+if (fabMain) {
   fabMain.addEventListener('click', () => {
-    const open = fabContainer.classList.toggle('open');
-    fabMain.setAttribute('aria-expanded', open);
-  });
-  document.addEventListener('click', (e) => {
-    if (!fabContainer.contains(e.target)) {
-      fabContainer.classList.remove('open');
-      fabMain.setAttribute('aria-expanded', 'false');
-    }
+    window.open('https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20serrures.', '_blank');
   });
 }
