@@ -1207,3 +1207,232 @@ select {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ===== Correctifs pages villes / FAB / breadcrumb ===== */
+
+.fab-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.fab-main {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-strong));
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45);
+  color: #fff;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  z-index: 2;
+}
+
+.fab-main:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(14, 165, 233, 0.6);
+}
+
+.fab-icon-close {
+  display: none;
+}
+
+.fab-container.open .fab-icon-open {
+  display: none;
+}
+
+.fab-container.open .fab-icon-close {
+  display: block;
+}
+
+.fab-items {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.6rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.25s ease-out;
+}
+
+.fab-container.open .fab-items {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.fab-item {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.fab-item:hover {
+  transform: scale(1.1);
+}
+
+.fab-whatsapp {
+  background: #16a34a;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.5);
+}
+
+.fab-whatsapp:hover {
+  box-shadow: 0 6px 22px rgba(22, 163, 74, 0.7);
+}
+
+.fab-phone {
+  background: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.45);
+}
+
+.fab-phone:hover {
+  box-shadow: 0 6px 22px rgba(14, 165, 233, 0.65);
+}
+
+.fab-tooltip {
+  position: absolute;
+  right: 56px;
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.fab-item:hover .fab-tooltip {
+  opacity: 1;
+}
+
+.breadcrumb {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.breadcrumb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.breadcrumb-list li {
+  list-style: none;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.4rem;
+  color: rgba(148, 163, 184, 0.4);
+}
+
+.breadcrumb-list a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.breadcrumb-list a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-list li:last-child {
+  color: var(--color-text-muted);
+}
+
+.header-tel {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.header-tel:hover {
+  background: rgba(22, 163, 74, 0.18);
+  border-color: rgba(22, 163, 74, 0.45);
+}
+
+.footer-villes {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+.footer-villes a {
+  color: var(--color-text-muted);
+  margin: 0 0.25rem;
+  white-space: nowrap;
+}
+
+.footer-villes a:hover {
+  color: var(--color-accent);
+}
+
+.contact-btn-phone {
+  background: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+.contact-btn-phone:hover {
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.18);
+}
+
+.contact-btn-phone .contact-btn-icon {
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--color-accent);
+}
+
+@media (min-width: 640px) {
+  .header-tel {
+    display: flex;
+  }
+}
+
+@media (max-width: 639px) {
+  .footer-villes {
+    font-size: 0.7rem;
+    line-height: 2.2;
+  }
+
+  .fab-container {
+    bottom: 1.25rem;
+    right: 1rem;
+  }
+}
