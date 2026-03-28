@@ -63,29 +63,22 @@
 .section-reviews {
   background: radial-gradient(circle at top left, rgba(14,165,233,0.06), transparent 60%);
 }
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-.carousel-track {
-  display: flex;
+.reviews-grid {
+  display: grid;
   gap: 1rem;
-  transition: transform 0.4s ease-out;
+}
+@media (min-width: 640px) {
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .reviews-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .review-card {
   background: rgba(15,23,42,0.86);
   border: 1px solid rgba(148,163,184,0.25);
   border-radius: 16px;
   padding: 1.2rem 1.3rem;
-  min-width: calc(100% - 0px);
-  flex-shrink: 0;
   transition: border-color 0.22s ease-out;
-}
-@media (min-width: 640px) {
-  .review-card { min-width: calc(50% - 0.5rem); }
-}
-@media (min-width: 1024px) {
-  .review-card { min-width: calc(33.333% - 0.67rem); }
 }
 .review-card:hover { border-color: rgba(14,165,233,0.4); }
 .review-stars {
@@ -109,26 +102,6 @@
 .review-author span {
   color: var(--color-accent);
   font-weight: 400;
-}
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.2rem;
-}
-.carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(148,163,184,0.3);
-  border: none;
-  cursor: pointer;
-  transition: background 0.22s ease-out, transform 0.22s ease-out;
-  padding: 0;
-}
-.carousel-dot.active {
-  background: var(--color-accent);
-  transform: scale(1.2);
 }
 ```
 
@@ -506,8 +479,7 @@
       <h2>Ce que disent nos clients</h2>
       <p>Ils nous font confiance partout au Maroc.</p>
     </header>
-    <div class="carousel-wrapper reveal-on-scroll">
-      <div class="carousel-track" id="carouselTrack">
+    <div class="reviews-grid reveal-on-scroll">
 
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
@@ -557,8 +529,6 @@
           <div class="review-author">Sara T. — <span>Bouznika</span></div>
         </div>
 
-      </div>
-      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </div>
 </section>
