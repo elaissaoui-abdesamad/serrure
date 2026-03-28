@@ -93,3 +93,83 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Erreur FAB:', e);
   }
 });
+
+try {
+  var promoConfig = {
+    "Serrure SmartLock": {
+      oldPrice: "1 190 DH",
+      newPrice: "900 DH",
+      badge: "PROMO -24%"
+    },
+    "Serrure NextLock": {
+      oldPrice: "1 790 DH",
+      newPrice: "1 400 DH",
+      badge: "PROMO -22%"
+    },
+    "Serrure NeoLock": {
+      oldPrice: "2 190 DH",
+      newPrice: "1 700 DH",
+      badge: "PROMO -22%"
+    },
+    "Serrure FutureLock": {
+      oldPrice: "3 290 DH",
+      newPrice: "2 600 DH",
+      badge: "PROMO -21%"
+    },
+    "Serrure Infinity": {
+      oldPrice: "3 790 DH",
+      newPrice: "3 000 DH",
+      badge: "PROMO -21%"
+    }
+  };
+
+  document.querySelectorAll('.product-card').forEach(function (card) {
+    var titleEl = card.querySelector('h3');
+    var priceEl = card.querySelector('.product-price');
+
+    if (!titleEl || !priceEl) return;
+
+    var title = titleEl.textContent.trim();
+    var config = promoConfig[title];
+
+    if (!config) return;
+
+    if (!card.querySelector('.promo-badge')) {
+      var modelBadge = card.querySelector('.product-model-badge');
+      var promoBadge = document.createElement('span');
+      promoBadge.className = 'promo-badge';
+      promoBadge.textContent = config.badge;
+
+      if (modelBadge) {
+        modelBadge.parentNode.insertBefore(promoBadge, modelBadge);
+      } else {
+        titleEl.parentNode.insertBefore(promoBadge, titleEl);
+      }
+    }
+
+    if (priceEl.tagName.toLowerCase() === 'p') {
+      var installText = '';
+      var installSpan = priceEl.querySelector('span');
+      if (installSpan) {
+        installText = installSpan.textContent.trim();
+      } else {
+        installText = 'installation incluse';
+      }
+
+      var oldNum = parseInt(config.oldPrice.replace(/\D/g, ''), 10);
+      var newNum = parseInt(config.newPrice.replace(/\D/g, ''), 10);
+      var saving = oldNum - newNum;
+
+      var newPriceBlock = document.createElement('div');
+      newPriceBlock.className = 'product-price';
+      newPriceBlock.innerHTML =
+        '<span class="price-old">' + config.oldPrice + '</span>' +
+        '<span class="price-new">' + config.newPrice + ' <span>(' + installText + ')</span></span>' +
+        '<span class="price-saving">Économie : ' + saving.toLocaleString('fr-FR') + ' DH</span>';
+
+      priceEl.parentNode.replaceChild(newPriceBlock, priceEl);
+    }
+  });
+} catch (e) {
+  console.error('Erreur promos produits:', e);
+}
