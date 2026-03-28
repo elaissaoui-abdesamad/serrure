@@ -39,14 +39,25 @@ observer.unobserve(entry.target);
 revealEls.forEach(el => observer.observe(el));
 
 // ── Carrousel avis ──
+window.addEventListener(‘load’, function() {
 const track = document.getElementById(‘carouselTrack’);
 const dotsContainer = document.getElementById(‘carouselDots’);
-if (track && dotsContainer) {
-const cards = track.querySelectorAll(’.review-card’);
-let perView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
-let current = 0;
-const total = Math.ceil(cards.length / perView);
+if (!track || !dotsContainer) return;
 
+const cards = Array.from(track.querySelectorAll(’.review-card’));
+if (cards.length === 0) return;
+
+function getPerView() {
+return window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+}
+
+let perView = getPerView();
+let current = 0;
+let total = Math.ceil(cards.length / perView);
+
+function buildDots() {
+dotsContainer.innerHTML = ‘’;
+total = Math.ceil(cards.length / perView);
 for (let i = 0; i < total; i++) {
 const dot = document.createElement(‘button’);
 dot.className = ‘carousel-dot’ + (i === 0 ? ’ active’ : ‘’);
@@ -54,22 +65,34 @@ dot.setAttribute(‘aria-label’, ’Slide ’ + (i + 1));
 dot.addEventListener(‘click’, () => goTo(i));
 dotsContainer.appendChild(dot);
 }
+}
 
 function goTo(index) {
+if (index >= total) index = 0;
+if (index < 0) index = total - 1;
 current = index;
 const cardWidth = cards[0].offsetWidth + 16;
-track.style.transform = `translateX(-${current * perView * cardWidth}px)`;
-dotsContainer.querySelectorAll(’.carousel-dot’).forEach((d, i) => {
+track.style.transform = ‘translateX(-’ + (current * perView * cardWidth) + ‘px)’;
+dotsContainer.querySelectorAll(’.carousel-dot’).forEach(function(d, i) {
 d.classList.toggle(‘active’, i === current);
 });
 }
 
-let timer = setInterval(() => goTo((current + 1) % total), 3500);
-track.addEventListener(‘mouseenter’, () => clearInterval(timer));
-track.addEventListener(‘mouseleave’, () => {
-timer = setInterval(() => goTo((current + 1) % total), 3500);
+buildDots();
+
+let timer = setInterval(function() { goTo(current + 1); }, 3500);
+track.addEventListener(‘mouseenter’, function() { clearInterval(timer); });
+track.addEventListener(‘mouseleave’, function() {
+timer = setInterval(function() { goTo(current + 1); }, 3500);
 });
-}
+
+window.addEventListener(‘resize’, function() {
+perView = getPerView();
+current = 0;
+buildDots();
+goTo(0);
+});
+});
 
 // ── FAB → WhatsApp direct ──
 const fabMain = document.getElementById(‘fabMain’);
