@@ -1436,3 +1436,9 @@ select {
     right: 1rem;
   }
 }
+
+.fab-container,
+.fab-main,
+.fab-items {
+  display: none !important;
+}
