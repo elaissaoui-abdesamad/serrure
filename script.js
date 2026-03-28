@@ -70,24 +70,4 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-visible');
     });
   }
-
-  try {
-    var fabMain = document.getElementById('fabMain');
-    var fabContainer = document.querySelector('.fab-container');
-
-    if (fabMain && fabContainer) {
-      fabMain.addEventListener('click', function (e) {
-        e.stopPropagation();
-        fabContainer.classList.toggle('open');
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!fabContainer.contains(e.target)) {
-          fabContainer.classList.remove('open');
-        }
-      });
-    }
-  } catch (e) {
-    console.error('Erreur FAB:', e);
-  }
 });
