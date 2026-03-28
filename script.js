@@ -136,10 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!config) return;
 
-      // Ajouter le badge promo s'il n'existe pas déjà
-      if (!card.querySelector('.promo-badge')) {
+      // Ajouter ou mettre à jour le badge promo
+      var promoBadge = card.querySelector('.promo-badge');
+      if (!promoBadge) {
         var modelBadge = card.querySelector('.product-model-badge');
-        var promoBadge = document.createElement('span');
+        promoBadge = document.createElement('span');
         promoBadge.className = 'promo-badge';
         promoBadge.textContent = config.badge;
 
@@ -149,15 +150,16 @@ document.addEventListener('DOMContentLoaded', function () {
           titleEl.parentNode.insertBefore(promoBadge, titleEl);
         }
       } else {
-        card.querySelector('.promo-badge').textContent = config.badge;
+        promoBadge.textContent = config.badge;
       }
 
-      // Si c'est encore un <p class="product-price"> ancien format, on le remplace
+      var oldNum = parseDh(config.oldPrice);
+      var newNum = parseDh(config.newPrice);
+      var saving = oldNum - newNum;
+
+      // Ancien format : <p class="product-price">...</p>
       if (priceEl.tagName.toLowerCase() === 'p') {
         var installText = getInstallText(priceEl);
-        var oldNum = parseDh(config.oldPrice);
-        var newNum = parseDh(config.newPrice);
-        var saving = oldNum - newNum;
 
         var newPriceBlock = document.createElement('div');
         newPriceBlock.className = 'product-price';
@@ -170,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Si c'est déjà le nouveau format, on met juste à jour les valeurs
+      // Nouveau format déjà présent : mise à jour
       var oldEl = priceEl.querySelector('.price-old');
       var newEl = priceEl.querySelector('.price-new');
       var savingEl = priceEl.querySelector('.price-saving');
@@ -182,10 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
           currentInstallText = innerSpan.textContent.replace(/[()]/g, '').trim() || 'installation incluse';
         }
       }
-
-      var oldNum2 = parseDh(config.oldPrice);
-      var newNum2 = parseDh(config.newPrice);
-      var saving2 = oldNum2 - newNum2;
 
       if (!oldEl) {
         oldEl = document.createElement('span');
@@ -206,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
         savingEl.className = 'price-saving';
         priceEl.appendChild(savingEl);
       }
-      savingEl.textContent = 'Économie : ' + saving2.toLocaleString('fr-FR') + ' DH';
+      savingEl.textContent = 'Économie : ' + saving.toLocaleString('fr-FR') + ' DH';
     });
   } catch (e) {
     console.error('Erreur promos produits:', e);
