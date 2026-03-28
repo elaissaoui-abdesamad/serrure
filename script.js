@@ -70,4 +70,26 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-visible');
     });
   }
+
+  try {
+    var fabMain = document.getElementById('fabMain');
+    var fabContainer = document.getElementById('fabContainer');
+
+    if (fabMain && fabContainer) {
+      fabMain.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = fabContainer.classList.toggle('open');
+        fabMain.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!fabContainer.contains(e.target)) {
+          fabContainer.classList.remove('open');
+          fabMain.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  } catch (e) {
+    console.error('Erreur FAB:', e);
+  }
 });
