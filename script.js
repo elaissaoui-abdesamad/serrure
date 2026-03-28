@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // ── Année footer ──
   try {
     var yearEl = document.getElementById('year');
     if (yearEl) {
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Erreur year:', e);
   }
 
-  // ── Menu hamburger mobile ──
   try {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.main-nav');
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Erreur menu mobile:', e);
   }
 
-  // ── Reveal on scroll ──
   try {
     var revealEls = document.querySelectorAll('.reveal-on-scroll');
 
@@ -69,25 +66,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (e) {
     console.error('Erreur reveal on scroll:', e);
-
-    // fallback sécurité : on affiche quand même le contenu
     document.querySelectorAll('.reveal-on-scroll').forEach(function (el) {
       el.classList.add('is-visible');
     });
   }
 
-  // ── FAB WhatsApp ──
   try {
     var fabMain = document.getElementById('fabMain');
-    if (fabMain) {
-      fabMain.addEventListener('click', function () {
-        window.open(
-          'https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20serrures.',
-          '_blank'
-        );
+    var fabContainer = document.querySelector('.fab-container');
+
+    if (fabMain && fabContainer) {
+      fabMain.addEventListener('click', function (e) {
+        e.stopPropagation();
+        fabContainer.classList.toggle('open');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!fabContainer.contains(e.target)) {
+          fabContainer.classList.remove('open');
+        }
       });
     }
   } catch (e) {
-    console.error('Erreur FAB WhatsApp:', e);
+    console.error('Erreur FAB:', e);
   }
 });
