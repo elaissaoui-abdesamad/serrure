@@ -58,6 +58,80 @@
       font-size: 0.78rem;
       color: var(--color-text-muted);
     }
+
+```
+.section-reviews {
+  background: radial-gradient(circle at top left, rgba(14,165,233,0.06), transparent 60%);
+}
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s ease-out;
+}
+.review-card {
+  background: rgba(15,23,42,0.86);
+  border: 1px solid rgba(148,163,184,0.25);
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
+  min-width: calc(100% - 0px);
+  flex-shrink: 0;
+  transition: border-color 0.22s ease-out;
+}
+@media (min-width: 640px) {
+  .review-card { min-width: calc(50% - 0.5rem); }
+}
+@media (min-width: 1024px) {
+  .review-card { min-width: calc(33.333% - 0.67rem); }
+}
+.review-card:hover { border-color: rgba(14,165,233,0.4); }
+.review-stars {
+  color: var(--color-gold);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+.review-text {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-style: italic;
+}
+.review-author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.review-author span {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(148,163,184,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background 0.22s ease-out, transform 0.22s ease-out;
+  padding: 0;
+}
+.carousel-dot.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+```
+
   </style>
   <script type="application/ld+json">
   [
@@ -211,7 +285,7 @@
           <span class="product-badge badge-standard">Essentiel</span>
         </div>
         <div class="product-content">
-          <span class="promo-badge">-25% — Offre de lancement</span>
+          <span class="promo-badge">-25% — Promotion</span>
           <span class="product-model-badge">Modèle Smart lock</span>
           <h3>Serrure SmartLock</h3>
           <p class="product-tag">Idéale pour appartement au Maroc</p>
@@ -237,7 +311,7 @@
           <span class="product-badge badge-standard">Populaire</span>
         </div>
         <div class="product-content">
-          <span class="promo-badge">-22% — Offre de lancement</span>
+          <span class="promo-badge">-22% — Promotion</span>
           <span class="product-model-badge">Modèle Nextlock</span>
           <h3>Serrure NextLock</h3>
           <p class="product-tag">Multi-accès sans smartphone requis</p>
@@ -262,7 +336,7 @@
           <span class="product-badge badge-standard">Connectée</span>
         </div>
         <div class="product-content">
-          <span class="promo-badge">-23% — Offre de lancement</span>
+          <span class="promo-badge">-23% — Promotion</span>
           <span class="product-model-badge">Modèle NeoLock</span>
           <h3>Serrure NeoLock</h3>
           <p class="product-tag">WiFi intégré – contrôle à distance</p>
@@ -289,7 +363,7 @@
           <span class="product-badge badge-premium">Premium</span>
         </div>
         <div class="product-content">
-          <span class="promo-badge">-21% — Offre de lancement</span>
+          <span class="promo-badge">-21% — Promotion</span>
           <span class="product-model-badge">Modèle FutureLock</span>
           <h3>Serrure FutureLock</h3>
           <p class="product-tag">Reconnaissance faciale + empreinte</p>
@@ -315,7 +389,7 @@
           <span class="product-badge badge-top">Haut de gamme</span>
         </div>
         <div class="product-content">
-          <span class="promo-badge">-21% — Offre de lancement</span>
+          <span class="promo-badge">-21% — Promotion</span>
           <span class="product-model-badge">Modèle Infinity</span>
           <h3>Serrure Infinity</h3>
           <p class="product-tag">Reconnaissance faciale grand angle + écran</p>
@@ -418,6 +492,73 @@
         <h3 class="faq-question">Comment payer ? Faut-il payer à l'avance ?</h3>
         <p class="faq-answer">Vous pouvez payer à l'installation ou par virement bancaire. Aucun paiement anticipé n'est requis. Nous vous remettons une facture à la fin de l'intervention.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section section-reviews">
+  <div class="container">
+    <header class="section-header reveal-on-scroll">
+      <h2>Ce que disent nos clients</h2>
+      <p>Ils nous font confiance partout au Maroc.</p>
+    </header>
+    <div class="carousel-wrapper reveal-on-scroll">
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Installé en 2h, nickel. Je gère les accès Airbnb depuis mon tel. Top service."</p>
+          <div class="review-author">Nour B. — <span>Casablanca</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"La reconnaissance faciale marche même la nuit. Très satisfait, je recommande."</p>
+          <div class="review-author">Hakim R. — <span>Casablanca</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Parfait pour mon riad en location. Les codes temporaires c'est une révolution."</p>
+          <div class="review-author">Rayane M. — <span>Marrakech</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Bon rapport qualité-prix. Installation rapide et propre. SAV réactif."</p>
+          <div class="review-author">Hamid L. — <span>Rabat</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Plus de stress pour les clés perdues. Ma fille rentre avec son empreinte."</p>
+          <div class="review-author">Hinde K. — <span>Témara</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Hésité longtemps puis sauté le pas. Je regrette pas du tout."</p>
+          <div class="review-author">Lotfi A. — <span>Marrakech</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Rapide, propre, efficace. Mon local commercial est enfin bien sécurisé."</p>
+          <div class="review-author">Karim S. — <span>Rabat</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Je recommande à tous mes voisins. Le technicien était très professionnel."</p>
+          <div class="review-author">Sara T. — <span>Bouznika</span></div>
+        </div>
+
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </div>
 </section>
