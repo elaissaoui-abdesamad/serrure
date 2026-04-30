@@ -1471,3 +1471,47 @@ select {
 .section-seo-content .about-text a:hover {
   color: var(--color-gold);
 }
+
+.section-note {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.section-choice-guide,
+.section-seo-content {
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.06), transparent 60%);
+}
+
+.section-seo-content .about-text h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.section-seo-content .about-text a {
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section-seo-content .about-text a:hover {
+  color: var(--color-gold);
+}
+
+.product-reassurance {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-choice-guide .about-text p {
+  font-size: 0.95rem;
+}
+
+.section-choice-guide h2 {
+  margin-bottom: 0.6rem;
+}
