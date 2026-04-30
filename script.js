@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (toggle && nav) {
       toggle.addEventListener('click', function (e) {
         e.stopPropagation();
+
         var open = toggle.classList.toggle('open');
         nav.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (e) {
     console.error('Erreur reveal on scroll:', e);
+
     document.querySelectorAll('.reveal-on-scroll').forEach(function (el) {
       el.classList.add('is-visible');
     });
@@ -108,23 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return parseInt(String(value).replace(/[^\d]/g, ''), 10) || 0;
     }
 
-    function getInstallText(priceEl) {
-      if (!priceEl) return 'installation incluse';
-
-      var span = priceEl.querySelector('span');
-      if (span) {
-        return span.textContent.replace(/[()]/g, '').trim() || 'installation incluse';
-      }
-
-      var raw = priceEl.textContent || '';
-      var match = raw.match(/\((.*?)\)/);
-      if (match && match[1]) {
-        return match[1].trim();
-      }
-
-      return 'installation incluse';
-    }
-
     document.querySelectorAll('.product-card').forEach(function (card) {
       var titleEl = card.querySelector('h3');
       var priceEl = card.querySelector('.product-price');
@@ -136,74 +121,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!config) return;
 
-      // Ajouter ou mettre à jour le badge promo
+      // Badge promo
       var promoBadge = card.querySelector('.promo-badge');
+
       if (!promoBadge) {
         var modelBadge = card.querySelector('.product-model-badge');
+
         promoBadge = document.createElement('span');
         promoBadge.className = 'promo-badge';
-        promoBadge.textContent = config.badge;
 
         if (modelBadge && modelBadge.parentNode) {
           modelBadge.parentNode.insertBefore(promoBadge, modelBadge);
         } else if (titleEl.parentNode) {
           titleEl.parentNode.insertBefore(promoBadge, titleEl);
         }
-      } else {
-        promoBadge.textContent = config.badge;
       }
+
+      promoBadge.textContent = config.badge;
 
       var oldNum = parseDh(config.oldPrice);
       var newNum = parseDh(config.newPrice);
       var saving = oldNum - newNum;
 
-      // Ancien format : <p class="product-price">...</p>
+      // Si ancien format <p class="product-price">...</p>, on le convertit en div
       if (priceEl.tagName.toLowerCase() === 'p') {
-        var installText = getInstallText(priceEl);
-
         var newPriceBlock = document.createElement('div');
         newPriceBlock.className = 'product-price';
-        newPriceBlock.innerHTML =
-          '<span class="price-old">' + config.oldPrice + '</span>' +
-          '<span class="price-new">' + config.newPrice + ' <span>(' + installText + ')</span></span>' +
-          '<span class="price-saving">Économie : ' + saving.toLocaleString('fr-FR') + ' DH</span>';
 
         priceEl.parentNode.replaceChild(newPriceBlock, priceEl);
-        return;
+        priceEl = newPriceBlock;
       }
 
-      // Nouveau format déjà présent : mise à jour
       var oldEl = priceEl.querySelector('.price-old');
       var newEl = priceEl.querySelector('.price-new');
       var savingEl = priceEl.querySelector('.price-saving');
 
-      var currentInstallText = 'installation incluse';
-      if (newEl) {
-        var innerSpan = newEl.querySelector('span');
-        if (innerSpan) {
-          currentInstallText = innerSpan.textContent.replace(/[()]/g, '').trim() || 'installation incluse';
-        }
-      }
-
       if (!oldEl) {
         oldEl = document.createElement('span');
         oldEl.className = 'price-old';
-        priceEl.prepend(oldEl);
+        priceEl.appendChild(oldEl);
       }
-      oldEl.textContent = config.oldPrice;
 
       if (!newEl) {
         newEl = document.createElement('span');
         newEl.className = 'price-new';
         priceEl.appendChild(newEl);
       }
-      newEl.innerHTML = config.newPrice + ' <span>(' + currentInstallText + ')</span>';
 
       if (!savingEl) {
         savingEl = document.createElement('span');
         savingEl.className = 'price-saving';
         priceEl.appendChild(savingEl);
       }
+
+      oldEl.textContent = config.oldPrice;
+      newEl.textContent = config.newPrice;
       savingEl.textContent = 'Économie : ' + saving.toLocaleString('fr-FR') + ' DH';
     });
   } catch (e) {
