@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.elactronics.ma/sitemap.xml
+Sitemap: https://elactronics.ma/sitemap.xml
