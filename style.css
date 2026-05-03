@@ -367,15 +367,15 @@ select {
   justify-content: center;
 }
 
-.btn-wa {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.btn-outline-accent {
+  border-color: rgba(14, 165, 233, 0.5);
+  background: rgba(14, 165, 233, 0.08);
+  color: var(--color-accent);
 }
 
-.btn-wa svg {
-  color: var(--color-whatsapp);
-  flex-shrink: 0;
+.btn-outline-accent:hover {
+  border-color: var(--color-accent);
+  background: rgba(14, 165, 233, 0.15);
 }
 
 /* ── SECTIONS ── */
@@ -628,6 +628,13 @@ select {
   content: "•";
   color: var(--color-accent);
   margin-right: 0.45rem;
+}
+
+.product-reassurance {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .help-choice {
@@ -1113,6 +1120,11 @@ select {
     width: 100%;
     justify-content: center;
   }
+
+  .footer-villes {
+    font-size: 0.7rem;
+    line-height: 2.2;
+  }
 }
 
 /* ── TABLET & DESKTOP ── */
@@ -1173,6 +1185,10 @@ select {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .header-tel {
+    display: flex;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1208,125 +1224,7 @@ select {
   }
 }
 
-/* ===== Correctifs pages villes / FAB / breadcrumb ===== */
-
-.fab-container {
-  position: fixed;
-  bottom: 2rem;
-  right: 1.5rem;
-  z-index: 999;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  gap: 0.75rem;
-}
-
-.fab-main {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-strong));
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45);
-  color: #fff;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  position: relative;
-  z-index: 2;
-}
-
-.fab-main:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 32px rgba(14, 165, 233, 0.6);
-}
-
-.fab-icon-close {
-  display: none;
-}
-
-.fab-container.open .fab-icon-open {
-  display: none;
-}
-
-.fab-container.open .fab-icon-close {
-  display: block;
-}
-
-.fab-items {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  gap: 0.6rem;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.3s ease-out, opacity 0.25s ease-out;
-}
-
-.fab-container.open .fab-items {
-  max-height: 200px;
-  opacity: 1;
-}
-
-.fab-item {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  position: relative;
-}
-
-.fab-item:hover {
-  transform: scale(1.1);
-}
-
-.fab-whatsapp {
-  background: #16a34a;
-  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.5);
-}
-
-.fab-whatsapp:hover {
-  box-shadow: 0 6px 22px rgba(22, 163, 74, 0.7);
-}
-
-.fab-phone {
-  background: var(--color-accent);
-  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.45);
-}
-
-.fab-phone:hover {
-  box-shadow: 0 6px 22px rgba(14, 165, 233, 0.65);
-}
-
-.fab-tooltip {
-  position: absolute;
-  right: 56px;
-  background: rgba(15, 23, 42, 0.95);
-  color: var(--color-text);
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  border-radius: 6px;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-}
-
-.fab-item:hover .fab-tooltip {
-  opacity: 1;
-}
-
+/* ── PAGES VILLES ── */
 .breadcrumb {
   padding: 0.6rem 0;
   border-bottom: 1px solid rgba(148, 163, 184, 0.08);
@@ -1404,45 +1302,7 @@ select {
   color: var(--color-accent);
 }
 
-.contact-btn-phone {
-  background: rgba(14, 165, 233, 0.08);
-  border-color: rgba(14, 165, 233, 0.2);
-}
-
-.contact-btn-phone:hover {
-  border-color: rgba(14, 165, 233, 0.45);
-  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.18);
-}
-
-.contact-btn-phone .contact-btn-icon {
-  background: rgba(14, 165, 233, 0.12);
-  color: var(--color-accent);
-}
-
-@media (min-width: 640px) {
-  .header-tel {
-    display: flex;
-  }
-}
-
-@media (max-width: 639px) {
-  .footer-villes {
-    font-size: 0.7rem;
-    line-height: 2.2;
-  }
-
-  .fab-container {
-    bottom: 1.25rem;
-    right: 1rem;
-  }
-}
-
-.fab-container,
-.fab-main,
-.fab-items {
-  display: none !important;
-}
-
+/* ── SEO CONTENT ── */
 .section-note {
   margin-top: 0.75rem;
   font-weight: 600;
@@ -1470,42 +1330,6 @@ select {
 
 .section-seo-content .about-text a:hover {
   color: var(--color-gold);
-}
-
-.section-note {
-  margin-top: 0.75rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.section-choice-guide,
-.section-seo-content {
-  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.06), transparent 60%);
-}
-
-.section-seo-content .about-text h3 {
-  margin-top: 1.4rem;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: var(--color-text);
-}
-
-.section-seo-content .about-text a {
-  font-weight: 700;
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.section-seo-content .about-text a:hover {
-  color: var(--color-gold);
-}
-
-.product-reassurance {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin-top: -0.5rem;
-  margin-bottom: 0.8rem;
 }
 
 .section-choice-guide .about-text p {
@@ -1514,15 +1338,4 @@ select {
 
 .section-choice-guide h2 {
   margin-bottom: 0.6rem;
-}
-
-.btn-outline-accent {
-  border-color: rgba(14, 165, 233, 0.5);
-  background: rgba(14, 165, 233, 0.08);
-  color: var(--color-accent);
-}
-
-.btn-outline-accent:hover {
-  border-color: var(--color-accent);
-  background: rgba(14, 165, 233, 0.15);
 }
