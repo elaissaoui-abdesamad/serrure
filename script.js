@@ -75,4 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-visible');
     });
   }
+
+  // FAQ accordéon
+  try {
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.closest('.faq-item');
+        if (item) {
+          item.classList.toggle('active');
+        }
+      });
+    });
+  } catch (e) {
+    console.error('Erreur FAQ accordéon:', e);
+  }
 });
