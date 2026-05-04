@@ -1,32 +1,310 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-MA">
 <head>
-  <meta charset="UTF-8">
-  <title>FAQ – Serrure électronique Maroc</title>
-  <meta name="description" content="Questions fréquentes sur les serrures électroniques au Maroc : prix, installation, compatibilité, sécurité.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FAQ Serrure électronique Maroc | Prix, installation, compatibilité</title>
+  <meta name="description" content="Questions fréquentes sur les serrures électroniques au Maroc : prix, installation, compatibilité porte, batterie, sécurité, Airbnb et garantie." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://elactronics.ma/faq.html" />
+
+  <meta property="og:title" content="FAQ – Serrure électronique au Maroc | Elactronics" />
+  <meta property="og:description" content="Tout savoir avant d’installer une serrure électronique au Maroc : prix, compatibilité, batterie, sécurité et garantie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elactronics.ma/faq.html" />
+  <meta property="og:image" content="https://elactronics.ma/images/serrure-electronique-maroc.webp" />
+  <meta property="og:locale" content="fr_MA" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le prix d'une serrure électronique au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chez Elactronics, les serrures électroniques commencent à partir de 890 DH avec installation incluse. Les modèles les plus complets avec reconnaissance faciale et application mobile peuvent aller jusqu’à 2 990 DH."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'installation est-elle incluse dans le prix ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, l’installation est incluse dans le prix. La pose, la configuration des accès et l’explication de l’utilisation sont comprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Installez-vous partout au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, Elactronics intervient dans plusieurs villes du Maroc, notamment Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, Kénitra, Mohammedia et Témara."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La serrure électronique est-elle compatible avec ma porte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La majorité des portes standards sont compatibles. Avant installation, nous vérifions la porte. Vous pouvez aussi envoyer une photo sur WhatsApp pour confirmer la compatibilité."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il si la batterie est vide ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les serrures disposent d’alertes de batterie faible. Selon le modèle, une recharge d’urgence ou une clé mécanique de secours permet d’ouvrir la porte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on ouvrir sans téléphone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Selon le modèle, l’ouverture peut se faire par empreinte digitale, code PIN, carte RFID, reconnaissance faciale ou clé mécanique de secours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle serrure choisir pour un Airbnb au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour un Airbnb, les modèles connectés comme NeoLock, FutureLock ou Infinity sont recommandés, car ils permettent une gestion plus simple des accès et évitent la remise de clés physiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La serrure électronique est-elle fiable au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, les serrures électroniques proposées par Elactronics sont conçues pour un usage quotidien au Maroc, que ce soit pour un appartement, une villa, un bureau ou une location courte durée."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle garantie est incluse ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les serrures électroniques Elactronics sont garanties 2 ans. La garantie couvre les défauts de fonctionnement liés au produit, hors choc, mauvaise utilisation ou détérioration volontaire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment commander une serrure électronique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez contacter Elactronics sur WhatsApp, envoyer une photo de votre porte, choisir le modèle adapté, puis planifier l’installation."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <span class="brand-name">Elactronics</span>
+          <span class="brand-sub">Serrures électroniques</span>
+        </span>
+      </div>
 
-<h1>Questions fréquentes – Serrure électronique au Maroc</h1>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#produits">Produits</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="prix-serrure-electronique-maroc.html">Prix Maroc</a>
+        <a href="meilleure-serrure-electronique-maroc.html">Comparatif</a>
+        <a href="serrure-electronique-fiable.html">Fiabilité</a>
+      </nav>
 
-<h2>Quel est le prix d'une serrure électronique au Maroc ?</h2>
-<p>Nos modèles commencent à partir de 890 DH avec installation incluse.</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<h2>Installez-vous partout au Maroc ?</h2>
-<p>Oui, nous intervenons à Casablanca, Rabat, Marrakech et partout au Maroc.</p>
+  <main>
+    <section class="hero reveal-on-scroll">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Questions fréquentes</p>
 
-<h2>La serrure est-elle compatible avec ma porte ?</h2>
-<p>La majorité des portes standards sont compatibles. Contactez-nous pour vérifier.</p>
+          <h1>FAQ serrure électronique au Maroc</h1>
 
-<h2>Que se passe-t-il si la batterie est vide ?</h2>
-<p>Les serrures disposent d’une alimentation de secours ou d’une clé d’urgence.</p>
+          <p class="hero-subtitle">
+            Prix, installation, compatibilité, batterie, sécurité, garantie et choix du modèle :
+            voici les réponses aux questions les plus fréquentes avant de commander.
+          </p>
 
-<h2>Peut-on ouvrir sans téléphone ?</h2>
-<p>Oui, avec empreinte digitale, code ou carte RFID selon le modèle.</p>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/33625287070?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20les%20serrures%20%C3%A9lectroniques."
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Poser une question sur WhatsApp
+            </a>
 
-<h2>La serrure est-elle fiable ?</h2>
-<p>Oui, nos modèles sont conçus pour sécuriser appartements, villas et bureaux.</p>
+            <a href="index.html#produits" class="btn btn-outline-accent">
+              Voir les modèles
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section-faq">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Questions fréquentes sur les serrures électroniques</h2>
+          <p>Tout ce qu’il faut savoir avant l’installation.</p>
+        </header>
+
+        <div class="faq-grid reveal-on-scroll">
+          <div class="faq-item">
+            <button class="faq-question" type="button">Quel est le prix d'une serrure électronique au Maroc ?</button>
+            <div class="faq-answer">
+              <p>Chez Elactronics, les serrures électroniques commencent à partir de 890 DH avec installation incluse. Les modèles les plus complets avec reconnaissance faciale et application mobile peuvent aller jusqu’à 2 990 DH.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">L'installation est-elle incluse dans le prix ?</button>
+            <div class="faq-answer">
+              <p>Oui. Le prix inclut la pose, la configuration complète et l’explication de l’utilisation après l’installation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Installez-vous partout au Maroc ?</button>
+            <div class="faq-answer">
+              <p>Oui, nous intervenons notamment à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, Kénitra, Mohammedia, Témara et dans plusieurs autres villes du Maroc.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">La serrure est-elle compatible avec ma porte ?</button>
+            <div class="faq-answer">
+              <p>La majorité des portes standards sont compatibles. Avant l’installation, nous vérifions toujours la porte. Vous pouvez aussi envoyer une photo sur WhatsApp pour confirmer le modèle adapté.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Que se passe-t-il si la batterie est vide ?</button>
+            <div class="faq-answer">
+              <p>Les serrures préviennent avant que la batterie soit totalement vide. Selon le modèle, il existe une recharge d’urgence ou une clé mécanique de secours pour éviter de rester bloqué dehors.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Peut-on ouvrir la serrure sans téléphone ?</button>
+            <div class="faq-answer">
+              <p>Oui. Selon le modèle, l’ouverture peut se faire par empreinte digitale, code PIN, carte RFID, reconnaissance faciale ou clé mécanique de secours. Le téléphone est pratique, mais il n’est pas obligatoire.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Quelle serrure choisir pour un Airbnb au Maroc ?</button>
+            <div class="faq-answer">
+              <p>Pour un Airbnb ou une location courte durée, les modèles connectés comme NeoLock, FutureLock ou Infinity sont recommandés. Ils facilitent la gestion des accès et évitent la remise de clés physiques.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">La serrure électronique est-elle fiable au Maroc ?</button>
+            <div class="faq-answer">
+              <p>Oui. Les modèles proposés par Elactronics sont adaptés à un usage quotidien pour appartements, villas, bureaux, riads et locations courte durée.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Combien de temps dure l’installation ?</button>
+            <div class="faq-answer">
+              <p>L’installation est généralement rapide. Selon la porte et le modèle choisi, elle peut être réalisée en environ 2h avec configuration complète des accès.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Peut-on installer une serrure électronique sur une porte ancienne ?</button>
+            <div class="faq-answer">
+              <p>Oui, c’est souvent possible, mais cela dépend de l’état de la porte, de son épaisseur et de la serrure existante. Une photo de la porte permet de vérifier rapidement la compatibilité.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Quelle garantie est incluse ?</button>
+            <div class="faq-answer">
+              <p>Les serrures électroniques Elactronics sont garanties 2 ans. La garantie couvre les défauts de fonctionnement liés au produit, hors choc, mauvaise utilisation ou détérioration volontaire.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">Comment commander une serrure électronique ?</button>
+            <div class="faq-answer">
+              <p>Contactez-nous sur WhatsApp, envoyez une photo de votre porte si besoin, choisissez le modèle adapté, puis planifiez l’installation avec notre équipe.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="help-choice reveal-on-scroll">
+          <h3>Vous avez encore une question ?</h3>
+          <p>
+            Envoyez-nous une photo de votre porte ou décrivez votre besoin. Nous vous conseillons le modèle le plus adapté.
+          </p>
+          <a
+            href="https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20un%20conseil%20pour%20choisir%20une%20serrure%20%C3%A9lectronique."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demander conseil sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Accueil</a> |
+        <a href="index.html#produits">Produits</a> |
+        <a href="prix-serrure-electronique-maroc.html">Prix Maroc</a> |
+        <a href="meilleure-serrure-electronique-maroc.html">Comparatif</a> |
+        <a href="serrure-electronique-fiable.html">Fiabilité</a>
+      </div>
+
+      <div class="footer-links" style="margin-top: 0.4rem;">
+        <a href="mentions-legales.html">Mentions légales</a> |
+        <a href="cgv.html">CGV</a> |
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </div>
+
+      <p>&copy; <span id="year"></span> Elactronics &ndash; Serrures électroniques intelligentes au Maroc</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
