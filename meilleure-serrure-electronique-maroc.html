@@ -23,6 +23,89 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .page-comparatif .rank-chip {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.65rem;
+    }
+
+    .page-comparatif .rank-card {
+      border-left: 4px solid transparent;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .page-comparatif .rank-card--smart {
+      border-left-color: #22c55e;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.12) 0%, transparent 52%);
+    }
+    .page-comparatif .rank-card--smart .rank-chip {
+      background: rgba(34, 197, 94, 0.22);
+      color: #bbf7d0;
+    }
+
+    .page-comparatif .rank-card--next {
+      border-left-color: #3b82f6;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, transparent 52%);
+    }
+    .page-comparatif .rank-card--next .rank-chip {
+      background: rgba(59, 130, 246, 0.22);
+      color: #bfdbfe;
+    }
+
+    .page-comparatif .rank-card--neo {
+      border-left-color: #a855f7;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, transparent 52%);
+    }
+    .page-comparatif .rank-card--neo .rank-chip {
+      background: rgba(168, 85, 247, 0.22);
+      color: #e9d5ff;
+    }
+
+    .page-comparatif .rank-card--future {
+      border-left-color: #f59e0b;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, transparent 52%);
+    }
+    .page-comparatif .rank-card--future .rank-chip {
+      background: rgba(245, 158, 11, 0.22);
+      color: #fde68a;
+    }
+
+    .page-comparatif .rank-card--infinity {
+      border-left-color: #e5c07b;
+      background: linear-gradient(135deg, rgba(229, 192, 123, 0.14) 0%, transparent 55%);
+    }
+    .page-comparatif .rank-card--infinity .rank-chip {
+      background: rgba(229, 192, 123, 0.25);
+      color: #fef3c7;
+    }
+
+    .page-comparatif .use-card {
+      border-left-width: 4px;
+      border-left-style: solid;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .page-comparatif .rank-card,
+      .page-comparatif .use-card {
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      .page-comparatif .rank-card:hover,
+      .page-comparatif .use-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      }
+    }
+  </style>
+
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -68,7 +151,7 @@
     ]
   </script>
 </head>
-<body>
+<body class="page-comparatif">
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -103,7 +186,7 @@
             Appartement, villa, Airbnb, bureau ou local professionnel : le meilleur modèle dépend de votre usage, pas seulement du prix.
           </p>
           <div class="hero-actions">
-            <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20être%20conseillé%20pour%20choisir%20la%20meilleure%20serrure%20électronique." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Me conseiller sur WhatsApp</a>
+            <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20conseill%C3%A9%20pour%20choisir%20la%20meilleure%20serrure%20%C3%A9lectronique." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Me conseiller sur WhatsApp</a>
             <a href="prix-serrure-electronique-maroc.html" class="btn btn-outline-accent">Comparer les prix</a>
           </div>
         </div>
@@ -126,24 +209,29 @@
         </header>
 
         <div class="benefits-grid reveal-on-scroll">
-          <article class="benefit-card">
-            <h3>Meilleur prix : SmartLock</h3>
+          <article class="benefit-card rank-card rank-card--smart">
+            <span class="rank-chip">Meilleur prix</span>
+            <h3>SmartLock</h3>
             <p>Dès 890 DH installation incluse. Parfait pour passer au sans clé sans vous compliquer la vie.</p>
           </article>
-          <article class="benefit-card">
-            <h3>Meilleur choix famille : NextLock</h3>
+          <article class="benefit-card rank-card rank-card--next">
+            <span class="rank-chip">Famille</span>
+            <h3>NextLock</h3>
             <p>Empreinte, code, badge RFID et clé de secours : plusieurs modes pour toute la maison.</p>
           </article>
-          <article class="benefit-card">
-            <h3>Meilleur choix Airbnb : NeoLock</h3>
+          <article class="benefit-card rank-card rank-card--neo">
+            <span class="rank-chip">Airbnb</span>
+            <h3>NeoLock</h3>
             <p>Gestion à distance et historique des accès pour limiter la remise de clés physiques.</p>
           </article>
-          <article class="benefit-card">
-            <h3>Meilleur confort : FutureLock</h3>
+          <article class="benefit-card rank-card rank-card--future">
+            <span class="rank-chip">Confort</span>
+            <h3>FutureLock</h3>
             <p>Reconnaissance faciale, application, RFID et batterie rechargeable pour un usage premium.</p>
           </article>
-          <article class="benefit-card">
-            <h3>Le plus complet : Infinity</h3>
+          <article class="benefit-card rank-card rank-card--infinity">
+            <span class="rank-chip">Haut de gamme</span>
+            <h3>Infinity</h3>
             <p>Face ID grand angle, accès à distance, historique et finition haut de gamme.</p>
           </article>
         </div>
@@ -158,25 +246,25 @@
         </header>
 
         <div class="benefits-grid reveal-on-scroll">
-          <article class="benefit-card">
+          <article class="benefit-card use-card" style="border-left-color:#22c55e;background:linear-gradient(135deg,rgba(34,197,94,0.08) 0%,transparent 50%);">
             <h3>Appartement / studio</h3>
-            <p><strong>SmartLock</strong> ou <strong>NextLock</strong> — simple, efficace, excellent rapport qualité-prix.</p>
+            <p><strong style="color:#bbf7d0;">SmartLock</strong> ou <strong style="color:#bfdbfe;">NextLock</strong> — simple, efficace, excellent rapport qualité-prix.</p>
           </article>
-          <article class="benefit-card">
+          <article class="benefit-card use-card" style="border-left-color:#3b82f6;background:linear-gradient(135deg,rgba(59,130,246,0.08) 0%,transparent 50%);">
             <h3>Famille</h3>
-            <p><strong>NextLock</strong> — empreinte, code et RFID pour plusieurs personnes au quotidien.</p>
+            <p><strong style="color:#bfdbfe;">NextLock</strong> — empreinte, code et RFID pour plusieurs personnes au quotidien.</p>
           </article>
-          <article class="benefit-card">
+          <article class="benefit-card use-card" style="border-left-color:#a855f7;background:linear-gradient(135deg,rgba(168,85,247,0.08) 0%,transparent 50%);">
             <h3>Airbnb / courte durée</h3>
-            <p><strong>NeoLock</strong> — accès à distance et suivi très pratiques en location.</p>
+            <p><strong style="color:#e9d5ff;">NeoLock</strong> — accès à distance et suivi très pratiques en location.</p>
           </article>
-          <article class="benefit-card">
+          <article class="benefit-card use-card" style="border-left-color:#f59e0b;background:linear-gradient(135deg,rgba(245,158,11,0.08) 0%,transparent 50%);">
             <h3>Villa / logement premium</h3>
-            <p><strong>FutureLock</strong> — Face ID et confort technique pour une exigence plus haute.</p>
+            <p><strong style="color:#fde68a;">FutureLock</strong> — Face ID et confort technique pour une exigence plus haute.</p>
           </article>
-          <article class="benefit-card">
+          <article class="benefit-card use-card" style="border-left-color:#e5c07b;background:linear-gradient(135deg,rgba(229,192,123,0.1) 0%,transparent 50%);">
             <h3>Haut de gamme</h3>
-            <p><strong>Infinity</strong> — le maximum de fonctions et de finition dans la gamme Elactronics.</p>
+            <p><strong style="color:#fef3c7;">Infinity</strong> — le maximum de fonctions et de finition dans la gamme Elactronics.</p>
           </article>
         </div>
       </div>
@@ -222,7 +310,7 @@
             Pour arrêter les clés sans sur-équiper : la <strong>SmartLock</strong> suffit souvent. En famille, la <strong>NextLock</strong> est plus confortable.
             Pour Airbnb, la <strong>NeoLock</strong> est le choix le plus cohérent. Pour une villa ou un logement premium, la <strong>FutureLock</strong> ou l’<strong>Infinity</strong> sont les plus naturelles.
           </p>
-          <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20vous%20envoie%20une%20photo%20de%20ma%20porte%20pour%20choisir%20le%20bon%20modèle." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Envoyer une photo de ma porte</a>
+          <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20vous%20envoie%20une%20photo%20de%20ma%20porte%20pour%20choisir%20le%20bon%20mod%C3%A8le." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Envoyer une photo de ma porte</a>
         </div>
       </div>
     </section>
