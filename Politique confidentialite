@@ -17,28 +17,7 @@
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--color-accent); }
   </style>
-<!-- Google Analytics GA4 -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YG9P3FXJX9');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1981751045765597');
-fbq('track', 'PageView');
-</script>
-<!-- End Meta Pixel Code -->
+
 </head>
 <body>
   <header class="site-header">
@@ -57,7 +36,6 @@ fbq('track', 'PageView');
       </nav>
     </div>
   </header>
-
   <main>
     <div class="container legal-page">
       <a href="index.html" class="back-link">← Retour au site</a>
@@ -71,7 +49,8 @@ fbq('track', 'PageView');
 
       <div class="legal-section">
         <h2>2. Données collectées</h2>
-        <p>Ce site ne collecte aucune donnée personnelle directement. Aucun formulaire, cookie de tracking ou outil d'analyse n'est utilisé.</p>
+        <p>Ce site ne collecte aucune donnée personnelle via formulaire.
+Des outils de mesure d’audience (Google Analytics 4 et Meta Pixel) peuvent être utilisés.</p>
         <p>Dans le cadre d'une commande via WhatsApp, les informations suivantes peuvent être échangées :</p>
         <ul>
           <li>Nom et prénom</li>
@@ -131,6 +110,46 @@ fbq('track', 'PageView');
       <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes.</p>
     </div>
   </footer>
-  <script src="script.js" defer></script>
+<script>
+let trackingLoaded = false;
+
+function loadTracking() {
+  if (trackingLoaded) return;
+  trackingLoaded = true;
+
+  const gaScript = document.createElement('script');
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
+
+  gaScript.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-YG9P3FXJX9');
+  };
+
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1981751045765597');
+  fbq('track', 'PageView');
+}
+
+['click','scroll','mousemove','touchstart'].forEach(function(e){
+  window.addEventListener(e, loadTracking, { once:true, passive:true });
+});
+
+setTimeout(loadTracking, 3000);
+</script>
+
+<script src="script.js" defer></script>
 </body>
 </html>
