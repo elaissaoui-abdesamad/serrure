@@ -55,28 +55,6 @@
     ]
   }
   </script>
-  <!-- Google Analytics GA4 -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YG9P3FXJX9');
-</script>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1981751045765597');
-fbq('track', 'PageView');
-</script>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
   <header class="site-header">
@@ -191,6 +169,46 @@ fbq('track', 'PageView');
   </main>
 
   <footer class="site-footer"><div class="container footer-inner"><div class="footer-villes"><a href="index.html">Accueil</a> | <a href="casablanca.html">Casablanca</a> | <a href="rabat.html">Rabat</a> | <a href="marrakech.html">Marrakech</a> | <a href="meknes.html">Meknès</a> | <a href="tanger.html">Tanger</a> | <a href="agadir.html">Agadir</a> | <a href="fes.html">Fès</a> | <a href="sale.html">Salé</a> | <a href="kenitra.html">Kénitra</a> | <a href="mohammedia.html">Mohammedia</a> | <a href="temara.html">Témara</a></div><div class="footer-links" style="margin-top:0.5rem"><a href="mentions-legales.html">Mentions légales</a> | <a href="cgv.html">CGV</a> | <a href="politique-confidentialite.html">Confidentialité</a></div><p>© <span id="year"></span> Elactronics – Serrure électronique Kénitra</p></div></footer>
-  <script src="script.js" defer></script>
+<script>
+let trackingLoaded = false;
+
+function loadTracking() {
+  if (trackingLoaded) return;
+  trackingLoaded = true;
+
+  const gaScript = document.createElement('script');
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
+
+  gaScript.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-YG9P3FXJX9');
+  };
+
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1981751045765597');
+  fbq('track', 'PageView');
+}
+
+['click','scroll','mousemove','touchstart'].forEach(function(e){
+  window.addEventListener(e, loadTracking, { once:true, passive:true });
+});
+
+setTimeout(loadTracking, 3000);
+</script>
+
+<script src="script.js" defer></script>
 </body>
 </html>
