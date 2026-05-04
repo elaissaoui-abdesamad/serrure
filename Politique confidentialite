@@ -113,10 +113,11 @@ fbq('track', 'PageView');
         <p>Pour exercer ces droits, contactez-nous via WhatsApp au +33 6 25 28 70 70.</p>
       </div>
 
-      <div class="legal-section">
-        <h2>7. Cookies</h2>
-        <p>Ce site n'utilise aucun cookie de tracking ou publicitaire. Aucune bannière de consentement n'est donc nécessaire.</p>
-      </div>
+<div class="legal-section">
+  <h2>7. Cookies et outils de mesure</h2>
+  <p>Ce site utilise Google Analytics 4 et Meta Pixel afin de mesurer l’audience du site et l’efficacité des campagnes publicitaires.</p>
+  <p>Ces outils peuvent déposer des cookies ou collecter certaines informations techniques liées à la navigation.</p>
+</div>
     </div>
   </main>
 
@@ -130,6 +131,6 @@ fbq('track', 'PageView');
       <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
