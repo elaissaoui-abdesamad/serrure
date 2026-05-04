@@ -779,7 +779,7 @@ select {
   font-weight: 500;
 }
 
-/* ── FAQ ── */
+/* ── FAQ ACCORDÉON ── */
 .section-faq {
   background: radial-gradient(circle at top right, rgba(245, 196, 81, 0.06), transparent 55%);
 }
@@ -793,7 +793,8 @@ select {
   background: rgba(15, 23, 42, 0.86);
   border: 1px solid rgba(148, 163, 184, 0.25);
   border-radius: 18px;
-  padding: 1.25rem 1.3rem;
+  overflow: hidden;
+  padding: 0;
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -803,19 +804,35 @@ select {
 }
 
 .faq-question {
-  margin: 0 0 0.6rem;
+  width: 100%;
+  margin: 0;
+  padding: 1.15rem 1.3rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
   font-size: 0.97rem;
   font-weight: 700;
   color: var(--color-text);
 }
 
 .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
   margin: 0;
+  padding: 0 1.3rem 1.15rem;
   font-size: 0.87rem;
   color: var(--color-text-muted);
   line-height: 1.75;
 }
 
+.faq-item.active .faq-answer {
+  max-height: 280px;
+}
 /* ── BENEFITS ── */
 .section-benefits {
   background: radial-gradient(circle at top right, rgba(245, 196, 81, 0.2), transparent 55%);
