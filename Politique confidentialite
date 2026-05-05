@@ -1,122 +1,98 @@
 <!DOCTYPE html>
 <html lang="fr-MA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Politique de confidentialité – Elactronics</title>
-
-  <meta name="description" content="Politique de confidentialité Elactronics – Données personnelles, cookies, Google Analytics et Meta Pixel pour les serrures électroniques au Maroc.">
+  <meta name="description" content="Politique de confidentialité du site Elactronics. Informations sur la collecte, l’utilisation et la protection des données personnelles.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://elactronics.ma/politique-confidentialite.html">
+  <meta name="geo.region" content="MA">
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .legal-page { padding: 4rem 0 5rem; }
-    .legal-page h1 { font-size: 1.8rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
-    .legal-page .subtitle { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 2.5rem; }
-    .legal-section { margin-bottom: 2rem; }
-    .legal-section h2 { font-size: 1rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 0.6rem; }
-    .legal-section p, .legal-section li { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.7; margin: 0 0 0.4rem; }
-    .legal-section ul { list-style: none; padding: 0; }
-    .legal-section ul li::before { content: "—"; margin-right: 0.5rem; color: var(--color-gold); }
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 2rem; transition: color 0.2s; }
-    .back-link:hover { color: var(--color-accent); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand">
-      <img src="images/logo-elactronics.png" alt="Logo Elactronics" class="brand-logo">
-      <span class="brand-text">
-        <span class="brand-name">Elactronics</span>
-        <span class="brand-sub">Serrures électroniques</span>
-      </span>
-    </a>
-    <nav class="main-nav" aria-label="Navigation principale">
-        <a href="index.html#accueil">Accueil</a>
-        <a href="index.html#produits">Produits</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="container legal-page">
-      <a href="index.html" class="back-link">← Retour au site</a>
+  <main class="legal-page">
+    <div class="container">
+      <a href="/" class="back-link">← Retour au site</a>
+
       <h1>Politique de confidentialité</h1>
-      <p class="subtitle">Dernière mise à jour : juin 2025</p>
 
-      <div class="legal-section">
-        <h2>1. Responsable du traitement</h2>
-        <p>EL AISSAOUI Abdesamad, auto-entrepreneur sous le nom commercial Elactronics, ICE 003865218000056, Bouznika, Maroc. Contact : via WhatsApp au +33 6 25 28 70 70 ou Instagram @elactronics.ma.</p>
-      </div>
+      <h2>Responsable du traitement</h2>
+      <p>
+        Elactronics – Maroc<br>
+        Contact :
+        <a href="https://wa.me/33626287070" target="_blank" rel="noopener noreferrer">WhatsApp</a>,
+        <a href="https://www.instagram.com/elactronics.ma/" target="_blank" rel="noopener noreferrer">@elactronics.ma</a>,
+        ou email :
+        <a href="mailto:elactronics10@gmail.com">elactronics10@gmail.com</a>
+      </p>
 
-      <div class="legal-section">
-        <h2>2. Données collectées</h2>
-        <p>Ce site ne collecte aucune donnée personnelle via formulaire.
-Des outils de mesure d’audience (Google Analytics 4 et Meta Pixel) peuvent être utilisés.</p>
-        <p>Dans le cadre d'une commande via WhatsApp, les informations suivantes peuvent être échangées :</p>
-        <ul>
-          <li>Nom et prénom</li>
-          <li>Numéro de téléphone</li>
-          <li>Adresse d'installation</li>
-        </ul>
-      </div>
+      <h2>Données collectées</h2>
+      <p>Nous collectons uniquement les informations nécessaires au traitement des demandes :</p>
+      <ul>
+        <li>Nom</li>
+        <li>Numéro de téléphone</li>
+        <li>Adresse d’installation</li>
+        <li>Messages envoyés via WhatsApp, Facebook ou Instagram</li>
+      </ul>
 
-      <div class="legal-section">
-        <h2>3. Finalité du traitement</h2>
-        <p>Les données collectées lors d'une commande sont utilisées uniquement pour :</p>
-        <ul>
-          <li>Confirmer et organiser l'installation</li>
-          <li>Assurer le suivi SAV et la garantie</li>
-          <li>Répondre aux demandes de contact</li>
-        </ul>
-        <p>Aucune donnée n'est vendue, partagée ou transmise à des tiers à des fins commerciales.</p>
-      </div>
+      <h2>Utilisation des données</h2>
+      <p>Les données sont utilisées uniquement pour :</p>
+      <ul>
+        <li>Répondre aux demandes de devis</li>
+        <li>Planifier les installations</li>
+        <li>Assurer le service après-vente</li>
+        <li>Améliorer le suivi client</li>
+      </ul>
 
-      <div class="legal-section">
-        <h2>4. Durée de conservation</h2>
-        <p>Les données sont conservées pendant la durée de la garantie (2 ans) puis supprimées, sauf obligation légale contraire.</p>
-      </div>
+      <h2>Outils de mesure et publicité</h2>
+      <p>
+        Le site utilise Google Analytics et Meta Pixel afin de mesurer l’audience,
+        comprendre l’utilisation du site et améliorer nos campagnes publicitaires.
+      </p>
 
-      <div class="legal-section">
-        <h2>5. Hébergement et services tiers</h2>
-        <p>Ce site est hébergé par GitHub Pages (GitHub, Inc., San Francisco, États-Unis). Les liens WhatsApp et Instagram présents sur le site redirigent vers des plateformes tierces soumises à leurs propres politiques de confidentialité.</p>
-      </div>
+      <h2>Conservation des données</h2>
+      <p>
+        Les données sont conservées uniquement le temps nécessaire à la relation commerciale,
+        au suivi client et au service après-vente.
+      </p>
 
-      <div class="legal-section">
-        <h2>6. Vos droits</h2>
-        <p>Conformément à la loi marocaine n°09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez des droits suivants :</p>
-        <ul>
-          <li>Droit d'accès à vos données</li>
-          <li>Droit de rectification</li>
-          <li>Droit de suppression</li>
-          <li>Droit d'opposition au traitement</li>
-        </ul>
-        <p>Pour exercer ces droits, contactez-nous via WhatsApp au +33 6 25 28 70 70.</p>
-      </div>
+      <h2>Protection des données</h2>
+      <p>
+        Nous mettons en œuvre des mesures raisonnables pour protéger les informations transmises
+        contre l’accès non autorisé, la perte ou l’utilisation abusive.
+      </p>
 
-<div class="legal-section">
-  <h2>7. Cookies et outils de mesure</h2>
-  <p>Ce site utilise Google Analytics 4 et Meta Pixel afin de mesurer l’audience du site et l’efficacité des campagnes publicitaires.</p>
-  <p>Ces outils peuvent déposer des cookies ou collecter certaines informations techniques liées à la navigation.</p>
-</div>
+      <h2>Droits des utilisateurs</h2>
+      <p>
+        Vous pouvez demander la modification ou la suppression de vos données personnelles à tout moment
+        en nous contactant via WhatsApp, Instagram ou email.
+      </p>
+
+      <!-- 🔥 Petit boost SEO discret -->
+      <p>
+        Pour en savoir plus sur nos services :
+        <a href="/">serrure électronique au Maroc</a>
+      </p>
+
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-links">
-        <a href="mentions-legales.html">Mentions légales</a> |
-        <a href="cgv.html">CGV</a> |
-        <a href="politique-confidentialite.html">Confidentialité</a>
+        <a href="/">Accueil</a> |
+        <a href="/mentions-legales.html">Mentions légales</a> |
+        <a href="/cgv.html">CGV</a> |
+        <a href="/politique-confidentialite.html">Confidentialité</a>
       </div>
       <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes.</p>
     </div>
   </footer>
+
 <script>
 let trackingLoaded = false;
 
