@@ -7,7 +7,8 @@
 
   <title>À propos d'Elactronics | Spécialiste serrure électronique au Maroc</title>
   <meta name="description" content="Elactronics installe des serrures électroniques intelligentes partout au Maroc depuis 2025. Centaines d'installations réalisées, installation en 2h, garantie 2 ans." />
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow" />
+
   <meta property="og:title" content="À propos d'Elactronics | Spécialiste serrure électronique au Maroc" />
   <meta property="og:description" content="Elactronics installe des serrures électroniques intelligentes partout au Maroc depuis 2025. Centaines d'installations, garantie 2 ans." />
   <meta property="og:url" content="https://elactronics.ma/a-propos.html" />
@@ -37,6 +38,210 @@
   }
   </script>
 
+  <style>
+    .about-hero {
+      padding: 80px 0 64px;
+      text-align: center;
+    }
+    .about-hero .eyebrow {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent, #c9a84c);
+      margin-bottom: 20px;
+    }
+    .about-hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 auto 20px;
+      max-width: 680px;
+    }
+    .about-hero .subtitle {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: .72;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .about-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent, #c9a84c);
+      border: none;
+      margin: 48px auto;
+      border-radius: 2px;
+    }
+
+    .about-story {
+      padding: 0 0 64px;
+    }
+    .about-story-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .about-story-inner h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .about-story-inner p {
+      font-size: 1rem;
+      line-height: 1.8;
+      opacity: .82;
+      margin-bottom: 16px;
+    }
+
+    .about-stats-section {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .stat-number {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--accent, #c9a84c);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+
+    .about-why {
+      padding: 64px 0;
+    }
+    .about-why h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: border-color .2s;
+    }
+    .why-card:hover {
+      border-color: var(--accent, #c9a84c);
+    }
+    .why-icon {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .why-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: .875rem;
+      line-height: 1.65;
+      opacity: .68;
+      margin: 0;
+    }
+
+    .about-cred {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .about-cred h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cred-list {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cred-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .cred-check {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--accent, #c9a84c);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      color: #000;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+    .cred-item p {
+      font-size: .9rem;
+      line-height: 1.65;
+      opacity: .8;
+      margin: 0;
+    }
+
+    .about-cta {
+      padding: 64px 0 80px;
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .about-cta p {
+      opacity: .68;
+      font-size: .95rem;
+      margin-bottom: 32px;
+    }
+    .about-cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .about-hero { padding: 56px 0 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .about-cta-actions { flex-direction: column; align-items: center; }
+      .about-cta-actions .btn { width: 100%; max-width: 320px; text-align: center; }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -50,7 +255,6 @@
         <span class="brand-sub">Serrures électroniques</span>
       </div>
     </a>
-
     <nav class="main-nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="index.html#produits">Produits</a>
@@ -61,94 +265,145 @@
       <a href="meilleure-serrure-electronique-maroc.html">Comparatif</a>
       <a href="serrure-electronique-fiable.html">Fiabilité</a>
     </nav>
-
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<main class="section section-about">
-  <div class="container">
+<main>
 
-    <header class="section-header">
-      <h1>À propos d'Elactronics — Spécialiste serrure électronique au Maroc</h1>
-      <p>
-        Elactronics est une société spécialisée dans la vente et l'installation de serrures électroniques intelligentes au Maroc.
-        Notre mission : vous permettre d'accéder à votre logement ou local professionnel sans clé, en toute sécurité.
+  <section class="about-hero">
+    <div class="container">
+      <span class="eyebrow">À propos d'Elactronics</span>
+      <h1>Spécialiste de la serrure électronique au Maroc</h1>
+      <p class="subtitle">
+        Nous accompagnons particuliers et professionnels dans l'installation de serrures intelligentes — partout au Maroc, depuis 2025.
       </p>
-    </header>
+    </div>
+  </section>
 
-    <div class="about-inner">
-      <div class="about-text">
+  <hr class="about-divider" />
 
-        <h2>Notre histoire — serrures électroniques au Maroc depuis 2025</h2>
+  <section class="about-story">
+    <div class="container">
+      <div class="about-story-inner">
+        <h2>Notre histoire</h2>
         <p>
-          Elactronics a été fondée en 2025, face à un constat simple : la grande majorité des logements au Maroc utilisent encore des serrures classiques, peu pratiques et insuffisamment sécurisées.
+          Elactronics est née d'un constat simple : au Maroc, la majorité des logements utilisent encore des serrures classiques — peu pratiques, peu sécurisées, et inadaptées aux usages modernes.
         </p>
         <p>
-          Depuis notre lancement, nous avons réalisé des centaines d'installations à travers tout le Maroc — dans des appartements, des villas, des riads, des bureaux et des logements Airbnb.
+          Fondée en 2025, notre société propose une alternative accessible : des serrures électroniques de qualité, installées et configurées à domicile en 2 heures. Empreinte digitale, code PIN, carte RFID, reconnaissance faciale ou application mobile — chaque installation est adaptée à votre porte et à votre usage.
         </p>
         <p>
-          Chaque installation est prise en charge de A à Z : sélection du modèle adapté à votre porte, pose professionnelle, configuration complète des accès et explication de l'utilisation.
-          Vous repartez avec une serrure opérationnelle immédiatement.
+          Depuis notre lancement, nous avons réalisé des centaines d'installations à travers tout le Maroc : appartements, villas, riads, bureaux, logements Airbnb. Chaque client repart avec une serrure opérationnelle, configurée et garantie 2 ans.
         </p>
-        <p>
-          Nos serrures sont sélectionnées pour leur fiabilité, leur facilité d'utilisation et leur niveau de sécurité.
-          Elles permettent l'ouverture par empreinte digitale, code PIN, carte RFID, reconnaissance faciale ou application mobile selon le modèle.
-          Chaque produit est garanti 2 ans.
-        </p>
-
-        <h2>Notre engagement</h2>
-        <p>
-          Avant chaque installation, nous vérifions la compatibilité avec votre porte.
-          Vous pouvez également nous envoyer une photo sur WhatsApp pour obtenir un avis gratuit avant de commander.
-          Notre service après-vente est disponible par WhatsApp partout au Maroc.
-        </p>
-
       </div>
+    </div>
+  </section>
 
-      <div class="about-stats">
-        <div class="about-stat">
-          <span class="about-stat-number">2025</span>
-          <span class="about-stat-label">Fondée en</span>
+  <section class="about-stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">2025</span>
+          <span class="stat-label">Fondée en</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">100+</span>
-          <span class="about-stat-label">Installations réalisées</span>
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Installations réalisées</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">5</span>
-          <span class="about-stat-label">Modèles disponibles</span>
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Modèles disponibles</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">2 ans</span>
-          <span class="about-stat-label">Garantie incluse</span>
+        <div class="stat-item">
+          <span class="stat-number">2h</span>
+          <span class="stat-label">Installation incluse</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">2h</span>
-          <span class="about-stat-label">Installation rapide</span>
+        <div class="stat-item">
+          <span class="stat-number">2 ans</span>
+          <span class="stat-label">Garantie produit</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">Maroc</span>
-          <span class="about-stat-label">Intervention nationale</span>
+        <div class="stat-item">
+          <span class="stat-number">Maroc</span>
+          <span class="stat-label">Intervention nationale</span>
         </div>
       </div>
-
     </div>
+  </section>
 
-    <div style="margin-top:40px; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="index.html#produits" class="btn btn-primary">
-        Voir nos modèles
-      </a>
-      <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20un%20conseil%20pour%20une%20serrure%20%C3%A9lectronique." class="btn btn-secondary">
-        Nous contacter sur WhatsApp
-      </a>
+  <section class="about-why">
+    <div class="container">
+      <h2>Pourquoi choisir Elactronics ?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-icon">⚡</span>
+          <h3>Installation rapide</h3>
+          <p>Pose et configuration complète en 2h à domicile. Vous utilisez votre serrure le jour même.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🔒</span>
+          <h3>Sécurité avancée</h3>
+          <p>Serrures sélectionnées pour leur fiabilité au quotidien : appartements, villas, locaux professionnels.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">📱</span>
+          <h3>Sans clé, sans contrainte</h3>
+          <p>Empreinte, code, carte ou application — accédez à votre logement comme vous le souhaitez.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">💬</span>
+          <h3>Support réactif</h3>
+          <p>Conseil avant achat, vérification de compatibilité et SAV disponible par WhatsApp partout au Maroc.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <section class="about-cred">
+    <div class="container">
+      <h2>Ce qui nous distingue</h2>
+      <div class="cred-list">
+        <div class="cred-item">
+          <div class="cred-check">✓</div>
+          <p><strong>Vérification de compatibilité avant chaque installation.</strong> Envoyez une photo de votre porte sur WhatsApp — nous confirmons gratuitement le modèle adapté.</p>
+        </div>
+        <div class="cred-item">
+          <div class="cred-check">✓</div>
+          <p><strong>Installation incluse dans le prix, sans surprise.</strong> Pose professionnelle, configuration complète des accès et explication de l'utilisation sont comprises.</p>
+        </div>
+        <div class="cred-item">
+          <div class="cred-check">✓</div>
+          <p><strong>Garantie 2 ans sur tous les modèles.</strong> En cas de défaut de fonctionnement, nous prenons en charge le produit.</p>
+        </div>
+        <div class="cred-item">
+          <div class="cred-check">✓</div>
+          <p><strong>Des centaines d'installations réalisées au Maroc</strong> dans des appartements, villas, riads, bureaux et logements Airbnb depuis 2025.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <div class="container">
+      <h2>Un projet ? Parlons-en.</h2>
+      <p>Envoyez-nous une photo de votre porte sur WhatsApp. Nous vous conseillons le modèle le plus adapté, gratuitement.</p>
+      <div class="about-cta-actions">
+        <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20souhaite%20un%20conseil%20pour%20une%20serrure%20%C3%A9lectronique." class="btn btn-primary">
+          Nous contacter sur WhatsApp
+        </a>
+        <a href="index.html#produits" class="btn btn-outline-accent">
+          Voir nos modèles
+        </a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-
     <p style="margin-bottom:8px;">
       Nous installons des serrures électroniques partout au Maroc, notamment à
       <a href="casablanca.html">Casablanca</a>,
@@ -161,15 +416,12 @@
       <a href="mohammedia.html">Mohammedia</a> et
       <a href="temara.html">Témara</a>.
     </p>
-
     <div class="footer-links">
       <a href="mentions-legales.html">Mentions légales</a> |
       <a href="cgv.html">CGV</a> |
       <a href="politique-confidentialite.html">Confidentialité</a>
     </div>
-
     <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes au Maroc</p>
-
   </div>
 </footer>
 
