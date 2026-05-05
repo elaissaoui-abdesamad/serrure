@@ -1601,3 +1601,12 @@ div.faq-answer p {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
+
+.legal-page a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.legal-page a:hover {
+  text-decoration: none;
+}
