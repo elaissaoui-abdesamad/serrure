@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Politique de confidentialité – Elactronics</title>
+
+  <meta name="description" content="Politique de confidentialité Elactronics – Données personnelles, cookies, Google Analytics et Meta Pixel pour les serrures électroniques au Maroc.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://elactronics.ma/politique-confidentialite.html">
+
+  <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
     .legal-page { padding: 4rem 0 5rem; }
     .legal-page h1 { font-size: 1.8rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
@@ -17,19 +25,18 @@
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--color-accent); }
   </style>
-
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-mark"></span>
-        <span class="brand-text">
-          <span class="brand-name">Elactronics</span>
-          <span class="brand-sub">Serrures électroniques</span>
-        </span>
-      </div>
-      <nav class="main-nav">
+ <header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo-elactronics.png" alt="Logo Elactronics" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">Elactronics</span>
+        <span class="brand-sub">Serrures électroniques</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
         <a href="index.html#accueil">Accueil</a>
         <a href="index.html#produits">Produits</a>
         <a href="index.html#contact">Contact</a>
