@@ -11,7 +11,6 @@
   <meta name="geo.region" content="MA">
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -24,7 +23,11 @@
       <h2>Responsable du traitement</h2>
       <p>
         Elactronics – Maroc<br>
-        Contact : via WhatsApp ou Instagram @elactronics.ma
+        Contact :
+        <a href="https://wa.me/33625287070" target="_blank" rel="noopener">WhatsApp</a>,
+        <a href="https://www.instagram.com/elactronics.ma/" target="_blank" rel="noopener">@elactronics.ma</a>,
+        ou email :
+        <a href="mailto:elactronics10@gmail.com">elactronics10@gmail.com</a>
       </p>
 
       <h2>Données collectées</h2>
@@ -66,7 +69,7 @@
       <h2>Droits des utilisateurs</h2>
       <p>
         Vous pouvez demander la modification ou la suppression de vos données personnelles à tout moment
-        en nous contactant via WhatsApp ou Instagram.
+        en nous contactant via WhatsApp, Instagram ou email.
       </p>
     </div>
   </main>
@@ -74,6 +77,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-links">
+        <a href="index.html">Accueil</a> |
         <a href="mentions-legales.html">Mentions légales</a> |
         <a href="cgv.html">CGV</a> |
         <a href="politique-confidentialite.html">Confidentialité</a>
@@ -82,47 +86,44 @@
     </div>
   </footer>
 
-  <script>
-  let trackingLoaded = false;
+<script>
+let trackingLoaded = false;
 
-  function loadTracking() {
-    if (trackingLoaded) return;
-    trackingLoaded = true;
+function loadTracking() {
+  if (trackingLoaded) return;
+  trackingLoaded = true;
 
-    // Google Analytics GA4
-    const gaScript = document.createElement('script');
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
-    gaScript.async = true;
-    document.head.appendChild(gaScript);
+  const gaScript = document.createElement('script');
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
 
-    gaScript.onload = function () {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      window.gtag = gtag;
+  gaScript.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-YG9P3FXJX9');
+  };
 
-      gtag('js', new Date());
-      gtag('config', 'G-YG9P3FXJX9');
-    };
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    // Meta Pixel
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1981751045765597');
+  fbq('track', 'PageView');
+}
 
-    fbq('init', '1981751045765597');
-    fbq('track', 'PageView');
-  }
+['click','scroll','mousemove','touchstart'].forEach(function(e){
+  window.addEventListener(e, loadTracking, { once:true, passive:true });
+});
 
-  ['click', 'scroll', 'mousemove', 'touchstart'].forEach(function(event) {
-    window.addEventListener(event, loadTracking, { once: true, passive: true });
-  });
-
-  setTimeout(loadTracking, 3000);
+setTimeout(loadTracking, 3000);
 </script>
 
 <script src="script.js" defer></script>
