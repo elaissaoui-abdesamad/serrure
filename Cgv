@@ -7,6 +7,7 @@
 <meta name="description" content="Conditions Générales de Vente Elactronics – Vente et installation de serrures électroniques au Maroc. Garantie 2 ans, paiement et livraison.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://elactronics.ma/cgv.html">
+  <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .legal-page { padding: 4rem 0 5rem; }
@@ -32,7 +33,7 @@
       </span>
     </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
       <a href="index.html#accueil">Accueil</a>
       <a href="index.html#produits">Produits</a>
       <a href="index.html#contact">Contact</a>
