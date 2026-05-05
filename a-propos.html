@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://elactronics.ma/a-propos.html" />
+  <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,16 +17,16 @@
 
 <header class="site-header">
   <div class="header-inner container">
-    <a href="/" class="brand">
-      <div class="brand-mark"></div>
+    <a href="index.html" class="brand">
+      <img src="images/logo-elactronics.png" alt="Logo Elactronics" class="brand-logo">
       <div class="brand-text">
         <span class="brand-name">Elactronics</span>
-        <span class="brand-sub">Serrures intelligentes</span>
+        <span class="brand-sub">Serrures électroniques</span>
       </div>
     </a>
 
-    <nav class="main-nav">
-      <a href="/">Accueil</a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
       <a href="a-propos.html" class="active">À propos</a>
     </nav>
   </div>
@@ -95,7 +96,7 @@
     </div>
 
     <div style="margin-top:40px;">
-      <a href="/" class="btn btn-primary btn-full">
+      <a href="index.html" class="btn btn-primary btn-full">
         Retour à l’accueil
       </a>
     </div>
@@ -105,11 +106,60 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© <span id="year"></span> Elactronics</p>
+    <div class="footer-links">
+  <a href="mentions-legales.html">Mentions légales</a> |
+  <a href="cgv.html">CGV</a> |
+  <a href="politique-confidentialite.html">Confidentialité</a>
+</div>
+
+<p>© <span id="year"></span> Elactronics</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+let trackingLoaded = false;
 
+function loadTracking() {
+  if (trackingLoaded) return;
+  trackingLoaded = true;
+
+  // Google Analytics 4
+  const gaScript = document.createElement('script');
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
+
+  gaScript.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-YG9P3FXJX9');
+  };
+
+  // Meta Pixel
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1981751045765597');
+  fbq('track', 'PageView');
+}
+
+// Chargement intelligent (perf)
+['click','scroll','mousemove','touchstart'].forEach(function(e){
+  window.addEventListener(e, loadTracking, { once:true, passive:true });
+});
+
+// Sécurité : charge quand même après 3s
+setTimeout(loadTracking, 3000);
+</script>
+
+<script src="script.js" defer></script>
 </body>
 </html>
