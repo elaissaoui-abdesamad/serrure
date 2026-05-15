@@ -1669,3 +1669,20 @@ div.faq-answer p {
 .product-card:hover .gallery-thumb img {
   transform: none;
 }
+@media (max-width: 639px) {
+  .product-image.product-gallery {
+    height: auto;
+    min-height: 0;
+    padding: 22px 16px 18px;
+    overflow: visible;
+  }
+
+  .product-gallery .gallery-main {
+    max-height: 230px;
+  }
+
+  .gallery-note {
+    margin-top: 10px;
+    padding: 0 8px;
+  }
+}
