@@ -1665,3 +1665,7 @@ div.faq-answer p {
   color: #64748b;
   text-align: center;
 }
+
+.product-card:hover .gallery-thumb img {
+  transform: none;
+}
