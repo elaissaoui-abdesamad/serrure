@@ -1667,31 +1667,25 @@ div.faq-answer p {
   }
 }
 
-/* ===== Footer propre (desktop + mobile) ===== */
-
+/* Footer uniforme sans casser les anciennes pages */
 .footer-links,
 .footer-villes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.35rem 0.6rem;
-  margin-bottom: 0.6rem;
-  line-height: 1.7;
+  text-align: center;
+  line-height: 1.9;
 }
 
 .footer-links a,
 .footer-villes a {
-  margin: 0;
+  margin: 0 0.28rem;
   white-space: nowrap;
 }
 
-/* Mobile */
+/* Mobile seulement */
 @media (max-width: 639px) {
   .footer-links,
   .footer-villes {
     font-size: 0.72rem;
-    gap: 0.4rem 0.6rem;
-    line-height: 1.5;
+    line-height: 2;
   }
 
   .footer-inner p {
