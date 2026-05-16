@@ -1667,22 +1667,31 @@ div.faq-answer p {
   }
 }
 
-/* Footer + maillage mobile uniforme */
+/* ===== Footer propre (desktop + mobile) ===== */
+
+.footer-links,
+.footer-villes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.6rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+
+.footer-links a,
+.footer-villes a {
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Mobile */
 @media (max-width: 639px) {
-  .site-footer {
-    margin-top: 1.2rem;
-    padding: 1.2rem 0 1.5rem;
-  }
-
-  .footer-links {
+  .footer-links,
+  .footer-villes {
     font-size: 0.72rem;
-    line-height: 1.95;
-    margin-bottom: 0.8rem;
-  }
-
-  .footer-links a {
-    margin: 0 0.22rem;
-    white-space: nowrap;
+    gap: 0.4rem 0.6rem;
+    line-height: 1.5;
   }
 
   .footer-inner p {
@@ -1690,23 +1699,5 @@ div.faq-answer p {
     margin: 0 auto;
     font-size: 0.74rem;
     line-height: 1.55;
-  }
-
-  .section-maillage {
-    padding: 2.2rem 0;
-  }
-
-  .section-maillage .about-text ul {
-    margin: 0;
-    padding-left: 1.1rem;
-  }
-
-  .section-maillage .about-text li {
-    font-size: 0.86rem;
-    line-height: 1.9;
-  }
-
-  .section-maillage .about-text a {
-    color: var(--color-text-muted);
   }
 }
