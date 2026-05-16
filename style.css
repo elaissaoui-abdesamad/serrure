@@ -1710,3 +1710,17 @@ div.faq-answer p {
     color: var(--color-text-muted);
   }
 }
+
+/* Footer desktop uniforme */
+@media (min-width: 640px) {
+  .footer-links,
+  .footer-villes {
+    font-size: 0.78rem;
+    line-height: 1.9;
+  }
+
+  .footer-inner p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+}
