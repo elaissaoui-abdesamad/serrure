@@ -1711,16 +1711,22 @@ div.faq-answer p {
   }
 }
 
-/* Footer desktop uniforme */
+/* Footer PC uniforme - version forcée */
 @media (min-width: 640px) {
-  .footer-links,
-  .footer-villes {
+  .site-footer .footer-links,
+  .site-footer .footer-villes,
+  .site-footer .footer-links a,
+  .site-footer .footer-villes a,
+  .site-footer .footer-inner p {
     font-size: 0.78rem;
+  }
+
+  .site-footer .footer-links,
+  .site-footer .footer-villes {
     line-height: 1.9;
   }
 
-  .footer-inner p {
-    font-size: 0.8rem;
+  .site-footer .footer-inner p {
     line-height: 1.6;
   }
 }
