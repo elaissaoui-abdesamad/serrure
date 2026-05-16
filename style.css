@@ -1694,6 +1694,12 @@ div.faq-answer p {
   .footer-villes {
     font-size: 0.72rem;
     line-height: 2;
+    color: var(--color-text-muted);
+  }
+
+  .footer-links a,
+  .footer-villes a {
+    color: var(--color-text-muted);
   }
 
   .footer-inner p {
@@ -1701,5 +1707,6 @@ div.faq-answer p {
     margin: 0 auto;
     font-size: 0.74rem;
     line-height: 1.55;
+    color: var(--color-text-muted);
   }
 }
