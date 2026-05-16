@@ -1649,6 +1649,7 @@ div.faq-answer p {
 .product-card:hover .gallery-thumb img {
   transform: none;
 }
+
 @media (max-width: 639px) {
   .product-image.product-gallery {
     height: auto;
@@ -1667,38 +1668,33 @@ div.faq-answer p {
   }
 }
 
-/* Footer uniforme sans casser les anciennes pages */
-.footer-links,
-.footer-villes {
+/* Footer uniforme */
+.footer-links {
   text-align: center;
   line-height: 1.9;
   margin-bottom: 0.6rem;
 }
 
-.footer-links a,
-.footer-villes a {
+.footer-links a {
   margin: 0 0.28rem;
   white-space: nowrap;
   color: var(--color-text-muted);
   transition: color var(--transition-fast);
 }
 
-.footer-links a:hover,
-.footer-villes a:hover {
+.footer-links a:hover {
   color: var(--color-accent);
 }
 
 /* Mobile seulement */
 @media (max-width: 639px) {
-  .footer-links,
-  .footer-villes {
+  .footer-links {
     font-size: 0.72rem;
     line-height: 2;
     color: var(--color-text-muted);
   }
 
-  .footer-links a,
-  .footer-villes a {
+  .footer-links a {
     color: var(--color-text-muted);
   }
 
@@ -1714,15 +1710,12 @@ div.faq-answer p {
 /* Footer PC uniforme - version forcée */
 @media (min-width: 640px) {
   .site-footer .footer-links,
-  .site-footer .footer-villes,
   .site-footer .footer-links a,
-  .site-footer .footer-villes a,
   .site-footer .footer-inner p {
     font-size: 0.78rem;
   }
 
-  .site-footer .footer-links,
-  .site-footer .footer-villes {
+  .site-footer .footer-links {
     line-height: 1.9;
   }
 
