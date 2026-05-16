@@ -1672,12 +1672,20 @@ div.faq-answer p {
 .footer-villes {
   text-align: center;
   line-height: 1.9;
+  margin-bottom: 0.6rem;
 }
 
 .footer-links a,
 .footer-villes a {
   margin: 0 0.28rem;
   white-space: nowrap;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-villes a:hover {
+  color: var(--color-accent);
 }
 
 /* Mobile seulement */
