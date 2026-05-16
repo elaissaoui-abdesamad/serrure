@@ -1106,21 +1106,6 @@ div.faq-answer p {
   color: var(--color-text-muted);
 }
 
-.footer-villes {
-  margin-bottom: 0.5rem;
-  font-size: 0.75rem;
-  line-height: 2;
-}
-
-.footer-villes a {
-  color: var(--color-text-muted);
-  margin: 0 0.25rem;
-  white-space: nowrap;
-}
-
-.footer-villes a:hover {
-  color: var(--color-accent);
-}
 
 /* Breadcrumb */
 .breadcrumb {
@@ -1488,11 +1473,6 @@ div.faq-answer p {
     width: 100%;
     justify-content: center;
   }
-
-  .footer-villes {
-    font-size: 0.7rem;
-    line-height: 2.2;
-  }
 }
 
 /* Tablet & desktop */
@@ -1689,9 +1669,15 @@ div.faq-answer p {
 
 /* Footer + maillage mobile uniforme */
 @media (max-width: 639px) {
+  .site-footer {
+    margin-top: 1.2rem;
+    padding: 1.2rem 0 1.5rem;
+  }
+
   .footer-links {
     font-size: 0.72rem;
-    line-height: 2.1;
+    line-height: 1.95;
+    margin-bottom: 0.8rem;
   }
 
   .footer-links a {
@@ -1699,11 +1685,28 @@ div.faq-answer p {
     white-space: nowrap;
   }
 
-  .section-maillage .about-text,
-  .section-maillage .about-text ul,
-  .section-maillage .about-text li,
-  .section-maillage .about-text a {
+  .footer-inner p {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+
+  .section-maillage {
+    padding: 2.2rem 0;
+  }
+
+  .section-maillage .about-text ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .section-maillage .about-text li {
     font-size: 0.86rem;
     line-height: 1.9;
+  }
+
+  .section-maillage .about-text a {
+    color: var(--color-text-muted);
   }
 }
