@@ -1686,3 +1686,24 @@ div.faq-answer p {
     padding: 0 8px;
   }
 }
+
+/* Footer + maillage mobile uniforme */
+@media (max-width: 639px) {
+  .footer-links {
+    font-size: 0.72rem;
+    line-height: 2.1;
+  }
+
+  .footer-links a {
+    margin: 0 0.22rem;
+    white-space: nowrap;
+  }
+
+  .section-maillage .about-text,
+  .section-maillage .about-text ul,
+  .section-maillage .about-text li,
+  .section-maillage .about-text a {
+    font-size: 0.86rem;
+    line-height: 1.9;
+  }
+}
