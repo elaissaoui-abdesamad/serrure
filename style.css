@@ -1824,3 +1824,49 @@ div.faq-answer p {
 .section-maillage .contact-bullets li:first-child {
   border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
+
+/* RESET FINAL MAILLAGE - CSS uniquement */
+.section-maillage .contact-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.section-maillage .contact-bullets li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.section-maillage .contact-bullets li::before {
+  content: "—";
+  margin-right: 0.3rem;
+  color: var(--color-gold);
+  display: inline;
+}
+
+.section-maillage .contact-bullets a {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  color: var(--color-text-muted);
+  font-size: 0.83rem;
+  font-weight: 400;
+  line-height: 1.6;
+  transform: none;
+}
+
+.section-maillage .contact-bullets a::after {
+  content: none;
+}
+
+.section-maillage .contact-bullets a:hover {
+  color: var(--color-accent);
+  padding-left: 0;
+  transform: none;
+  background: transparent;
+}
