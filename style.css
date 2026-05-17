@@ -1763,3 +1763,64 @@ div.faq-answer p {
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }
+
+/* =========================
+   FIX MAILLAGE INTERNE MOBILE / CLEAN LIST
+   ========================= */
+
+/* Reset uniquement dans la section maillage */
+.section-maillage .contact-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+/* Chaque ligne */
+.section-maillage .contact-bullets li {
+  margin: 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+/* Supprime les tirets actuels */
+.section-maillage .contact-bullets li::before {
+  display: none;
+}
+
+/* Lien full width cliquable */
+.section-maillage .contact-bullets a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 14px 0;
+
+  font-size: 0.95rem;
+  color: #e5e7eb;
+
+  transition: all 0.2s ease;
+}
+
+/* Flèche droite */
+.section-maillage .contact-bullets a::after {
+  content: "›";
+  color: #f5c451;
+  font-size: 1.2rem;
+
+  transition: transform 0.2s ease;
+}
+
+/* Hover (desktop uniquement) */
+.section-maillage .contact-bullets a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.section-maillage .contact-bullets a:hover::after {
+  transform: translateX(4px);
+}
+
+/* Ligne du haut pour fermer le bloc */
+.section-maillage .contact-bullets li:first-child {
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
