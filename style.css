@@ -396,6 +396,35 @@ select {
   background: rgba(14, 165, 233, 0.15);
 }
 
+.btn-demand {
+  background: transparent;
+  color: rgba(203, 213, 225, 0.85);
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+.btn-demand:hover {
+  background: rgba(148, 163, 184, 0.08);
+  border-color: rgba(148, 163, 184, 0.6);
+  color: #f9fafb;
+}
+
+.product-trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.product-trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 /* Sections */
 .section {
   padding: 3.5rem 0;
@@ -520,6 +549,12 @@ select {
 .badge-standard {
   background: rgba(14, 165, 233, 0.92);
   color: #fff;
+}
+
+.badge-demand {
+  background: rgba(148, 163, 184, 0.18);
+  color: rgba(203, 213, 225, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 .badge-premium {
