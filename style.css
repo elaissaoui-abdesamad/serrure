@@ -1136,15 +1136,23 @@ div.faq-answer p {
 }
 
 .footer-city a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.footer-city a:hover {
+  color: var(--color-accent);
+}
+
+.footer-city a[href="zones-couvertes.html"] {
   color: var(--color-gold);
   font-weight: 600;
-  text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 1px;
   margin-left: 2px;
 }
 
-.footer-city a:hover {
+.footer-city a[href="zones-couvertes.html"]:hover {
   opacity: 0.75;
 }
 
@@ -1156,7 +1164,7 @@ div.faq-answer p {
   border-bottom: 1px solid rgba(255,255,255,.07);
   width: 100%;
   margin-bottom: 14px;
-  line-height: 1.8;
+  line-height: 2.2;
 }
 
 .footer-nav a {
