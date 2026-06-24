@@ -301,46 +301,10 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 0;
+      gap: 12px;
     }
-    .faq-item {
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      color: inherit;
-      text-align: left;
-      padding: 20px 0;
-      font-size: .95rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .faq-question::after {
-      content: '+';
-      font-size: 1.2rem;
-      font-weight: 400;
-      opacity: .5;
-      flex-shrink: 0;
-      transition: transform .2s;
-    }
-    .faq-item.active .faq-question::after {
-      transform: rotate(45deg);
-    }
-    .faq-answer {
-      display: none;
-      padding: 0 0 20px;
-      font-size: .9rem;
-      line-height: 1.75;
-      opacity: .72;
-    }
-    .faq-item.active .faq-answer {
-      display: block;
+    .faq-item.active div.faq-answer {
+      max-height: 600px;
     }
 
     .zones-cta {
@@ -635,27 +599,27 @@
 
         <div class="faq-item">
           <button class="faq-question" type="button">Dans quelles villes du Maroc installez-vous des serrures électroniques ?</button>
-          <div class="faq-answer">Elactronics intervient actuellement à Casablanca, Rabat, Marrakech, Tanger, Agadir, Fès, Meknès, Salé, Kénitra, Mohammedia, Témara et Bouznika. Si votre ville n'est pas listée, contactez-nous sur WhatsApp — nous pouvons intervenir dans d'autres zones selon la demande.</div>
+          <div class="faq-answer"><p>Elactronics intervient actuellement à Casablanca, Rabat, Marrakech, Tanger, Agadir, Fès, Meknès, Salé, Kénitra, Mohammedia, Témara et Bouznika. Si votre ville n'est pas listée, contactez-nous sur WhatsApp — nous pouvons intervenir dans d'autres zones selon la demande.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" type="button">Combien de temps dure l'installation d'une serrure électronique ?</button>
-          <div class="faq-answer">L'installation est réalisée en 2 heures maximum à domicile. Elle inclut la dépose de l'ancienne serrure, la pose de la nouvelle, la configuration complète de tous les accès (empreintes digitales, codes, application mobile) et une explication de l'utilisation. Vous êtes opérationnel le jour même.</div>
+          <div class="faq-answer"><p>L'installation est réalisée en 2 heures maximum à domicile. Elle inclut la dépose de l'ancienne serrure, la pose de la nouvelle, la configuration complète de tous les accès (empreintes digitales, codes, application mobile) et une explication de l'utilisation. Vous êtes opérationnel le jour même.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" type="button">Comment savoir si ma porte est compatible avec une serrure électronique ?</button>
-          <div class="faq-answer">La majorité des portes au Maroc sont compatibles : portes en bois, portes métalliques et portes blindées (porte turque). Pour vérifier gratuitement, envoyez simplement une photo de votre porte sur WhatsApp. Nous vous confirmons la compatibilité et le modèle adapté avant toute commande.</div>
+          <div class="faq-answer"><p>La majorité des portes au Maroc sont compatibles : portes en bois, portes métalliques et portes blindées (porte turque). Pour vérifier gratuitement, envoyez simplement une photo de votre porte sur WhatsApp. Nous vous confirmons la compatibilité et le modèle adapté avant toute commande.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" type="button">Quel est le délai d'intervention après commande ?</button>
-          <div class="faq-answer">Après confirmation de la compatibilité de votre porte, l'intervention est planifiée sous 24 à 48h dans la plupart des villes couvertes. Le délai peut varier légèrement selon la disponibilité du technicien dans votre zone.</div>
+          <div class="faq-answer"><p>Après confirmation de la compatibilité de votre porte, l'intervention est planifiée sous 24 à 48h dans la plupart des villes couvertes. Le délai peut varier légèrement selon la disponibilité du technicien dans votre zone.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" type="button">Y a-t-il des frais de déplacement pour l'installation ?</button>
-          <div class="faq-answer">Non. L'installation à domicile est incluse dans le prix affiché sur notre site. Aucun frais de déplacement supplémentaire quelle que soit votre adresse dans les villes couvertes. Le prix indiqué est le prix final.</div>
+          <div class="faq-answer"><p>Non. L'installation à domicile est incluse dans le prix affiché sur notre site. Aucun frais de déplacement supplémentaire quelle que soit votre adresse dans les villes couvertes. Le prix indiqué est le prix final.</p></div>
         </div>
 
       </div>
