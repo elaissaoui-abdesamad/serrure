@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="fr-MA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Devenir technicien partenaire | Elactronics Maroc</title>
+  <meta name="description" content="Rejoignez le réseau Elactronics en tant que technicien installateur freelance de serrures électroniques au Maroc. Missions régulières, rémunération par installation." />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Devenir technicien partenaire | Elactronics Maroc" />
+  <meta property="og:description" content="Rejoignez le réseau Elactronics en tant que technicien installateur freelance de serrures électroniques au Maroc." />
+  <meta property="og:url" content="https://elactronics.ma/technicien-partenaire.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:image" content="https://elactronics.ma/images/serrure-electronique-maroc.webp" />
+
+  <link rel="canonical" href="https://elactronics.ma/technicien-partenaire.html" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .tech-hero {
+      padding: 80px 0 64px;
+      text-align: center;
+    }
+    .tech-hero .eyebrow {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 20px;
+    }
+    .tech-hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 auto 20px;
+      max-width: 680px;
+    }
+    .tech-hero .subtitle {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: .72;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .tech-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--color-gold);
+      border: none;
+      margin: 48px auto;
+      border-radius: 2px;
+    }
+
+    .tech-section {
+      padding: 56px 0;
+    }
+    .tech-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 0;
+    }
+    .offer-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: border-color .2s;
+    }
+    .offer-card:hover {
+      border-color: var(--color-gold);
+    }
+    .offer-icon {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .offer-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .offer-card p {
+      font-size: .875rem;
+      line-height: 1.65;
+      opacity: .68;
+      margin: 0;
+    }
+
+    .profile-section {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .profile-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .profile-list {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .profile-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .profile-check {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      color: #000;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+    .profile-item p {
+      font-size: .9rem;
+      line-height: 1.65;
+      opacity: .8;
+      margin: 0;
+    }
+
+    .cities-section {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+    }
+    .cities-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .cities-section p {
+      opacity: .72;
+      font-size: .95rem;
+      margin-bottom: 0;
+    }
+    .cities-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .city-tag {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .process-section {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .process-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .steps-list {
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      font-weight: 800;
+      color: #000;
+    }
+    .step-content h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      font-size: .875rem;
+      line-height: 1.65;
+      opacity: .68;
+      margin: 0;
+    }
+
+    .tech-cta {
+      padding: 64px 0 80px;
+      text-align: center;
+    }
+    .tech-cta h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .tech-cta p {
+      opacity: .68;
+      font-size: .95rem;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 600px) {
+      .tech-hero { padding: 56px 0 40px; }
+      .offer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="brand">
+      <img src="images/logo-elactronics.webp" alt="Logo Elactronics" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">Elactronics</span>
+        <span class="brand-sub">Serrures électroniques</span>
+      </div>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#produits">Produits</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="prix-serrure-electronique-maroc.html">Prix Maroc</a>
+      <a href="meilleure-serrure-electronique-maroc.html">Comparatif</a>
+      <a href="serrure-electronique-fiable.html">Fiabilité</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="tech-hero">
+    <div class="container">
+      <span class="eyebrow">Rejoindre le réseau</span>
+      <h1>Devenez technicien partenaire Elactronics</h1>
+      <p class="subtitle">
+        Vous êtes serrurier ou poseur de portes ? Travaillez avec nous en freelance et recevez des missions d'installation régulières dans votre ville.
+      </p>
+    </div>
+  </section>
+
+  <hr class="tech-divider" />
+
+  <section class="tech-section">
+    <div class="container">
+      <h2>Ce qu'on vous propose</h2>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <span class="offer-icon">💰</span>
+          <h3>Rémunération par installation</h3>
+          <p>Entre 150 et 300 DH par pose, selon le type de porte. Paiement après confirmation du client.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">📦</span>
+          <h3>Matériel fourni</h3>
+          <p>La serrure est livrée chez vous avant chaque mission. Vous n'avancez rien.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">📱</span>
+          <h3>Formation assurée</h3>
+          <p>On vous forme à distance sur la configuration de nos serrures. Simple, rapide.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">📅</span>
+          <h3>Missions régulières</h3>
+          <p>Selon la demande dans votre ville, vous recevez des missions en continu via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="container">
+      <h2>Le profil que nous recherchons</h2>
+      <div class="profile-list">
+        <div class="profile-item">
+          <div class="profile-check">✓</div>
+          <p><strong>Serrurier ou poseur de portes blindées.</strong> Vous savez intervenir sur portes en bois, métal et portes blindées (porte turque).</p>
+        </div>
+        <div class="profile-item">
+          <div class="profile-check">✓</div>
+          <p><strong>Outillage personnel.</strong> Perceuse, tournevis, meuleuse — vous êtes équipé pour travailler en autonomie.</p>
+        </div>
+        <div class="profile-item">
+          <div class="profile-check">✓</div>
+          <p><strong>Véhiculé et disponible.</strong> Vous pouvez vous déplacer chez les clients dans votre ville.</p>
+        </div>
+        <div class="profile-item">
+          <div class="profile-check">✓</div>
+          <p><strong>Sérieux et ponctuel.</strong> Vous représentez Elactronics face au client. Présentation soignée et respect des horaires attendus.</p>
+        </div>
+        <div class="profile-item">
+          <div class="profile-check">✓</div>
+          <p><strong>À l'aise sur WhatsApp.</strong> Le suivi des missions se fait via WhatsApp. Réactivité appréciée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cities-section">
+    <div class="container">
+      <h2>Villes recherchées</h2>
+      <p>Nous recrutons des techniciens dans les villes suivantes :</p>
+      <div class="cities-tags">
+        <span class="city-tag">Casablanca</span>
+        <span class="city-tag">Rabat</span>
+        <span class="city-tag">Tanger</span>
+        <span class="city-tag">Marrakech</span>
+        <span class="city-tag">Agadir</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <h2>Comment ça se passe</h2>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Vous nous contactez sur WhatsApp</h3>
+            <p>Présentez-vous : votre métier, votre ville, votre expérience. Un court message suffit.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Appel de présentation</h3>
+            <p>On échange 15 minutes pour vérifier que le profil correspond et vous expliquer le fonctionnement.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Formation produit</h3>
+            <p>On vous envoie une serrure test et on vous guide à distance pour la première installation.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Premières missions</h3>
+            <p>Vous recevez des missions dans votre ville. Chaque installation validée est rémunérée directement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-cta">
+    <div class="container">
+      <h2>Intéressé ? Contactez-nous.</h2>
+      <p>Envoyez-nous un message WhatsApp avec votre ville et votre expérience. On vous répond rapidement.</p>
+      <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20pour%20devenir%20technicien%20partenaire%20Elactronics." class="btn btn-primary">
+        Postuler sur WhatsApp
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p style="margin-bottom:8px;">
+      Nous installons des serrures électroniques partout au Maroc, notamment à
+      <a href="casablanca.html">Casablanca</a>,
+      <a href="bouznika.html">Bouznika</a>,
+      <a href="rabat.html">Rabat</a>,
+      <a href="marrakech.html">Marrakech</a>,
+      <a href="meknes.html">Meknès</a>,
+      <a href="tanger.html">Tanger</a>,
+      <a href="agadir.html">Agadir</a>,
+      <a href="fes.html">Fès</a>,
+      <a href="sale.html">Salé</a>,
+      <a href="kenitra.html">Kénitra</a>,
+      <a href="mohammedia.html">Mohammedia</a> et
+      <a href="temara.html">Témara</a>.
+    </p>
+    <div class="footer-nav" style="margin-bottom:8px; font-size:.75rem; opacity:.5;">
+      <a href="index.html">Accueil</a> |
+      <a href="casablanca.html">Casablanca</a> |
+      <a href="bouznika.html">Bouznika</a> |
+      <a href="rabat.html">Rabat</a> |
+      <a href="marrakech.html">Marrakech</a> |
+      <a href="meknes.html">Meknès</a> |
+      <a href="tanger.html">Tanger</a> |
+      <a href="agadir.html">Agadir</a> |
+      <a href="fes.html">Fès</a> |
+      <a href="sale.html">Salé</a> |
+      <a href="kenitra.html">Kénitra</a> |
+      <a href="mohammedia.html">Mohammedia</a> |
+      <a href="temara.html">Témara</a>
+    </div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a> |
+      <a href="cgv.html">CGV</a> |
+      <a href="politique-confidentialite.html">Confidentialité</a>
+    </div>
+    <p>© <span id="year"></span> Elactronics – Serrures électroniques intelligentes au Maroc</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let trackingLoaded = false;
+
+  function loadTracking() {
+    if (trackingLoaded) return;
+    trackingLoaded = true;
+
+    const gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-YG9P3FXJX9');
+    };
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1981751045765597');
+    fbq('track', 'PageView');
+  }
+
+  ['click','scroll','mousemove','touchstart'].forEach(function(e){
+    window.addEventListener(e, loadTracking, { once: true, passive: true });
+  });
+
+  setTimeout(loadTracking, 3000);
+</script>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
