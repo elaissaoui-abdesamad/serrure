@@ -94,6 +94,50 @@
       border-radius: 12px;
     }
 
+    .comparatif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .comp-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .comp-card__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 0.25rem;
+    }
+    .comp-card__price {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      margin: 0 0 0.75rem;
+    }
+    .comp-card__feat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 0.45rem;
+    }
+    .comp-card__feat:first-of-type { border-top: none; padding-top: 0; }
+    .feat-yes { color: #22c55e; font-weight: 700; }
+    .feat-no  { color: #6b7280; }
+    .comp-cta { text-align: center; margin-top: 2.5rem; }
+    @media (max-width: 640px) {
+      .comparatif-grid { grid-template-columns: 1fr; }
+    }
+
     @media (prefers-reduced-motion: no-preference) {
       .page-comparatif .rank-card,
       .page-comparatif .use-card {
@@ -271,6 +315,87 @@
             <h3>Haut de gamme</h3>
             <p><strong style="color:#fef3c7;">Infinity</strong> — le maximum de fonctions et de finition dans la gamme Elactronics.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Tableau comparatif des fonctionnalités</h2>
+          <p>Empreinte, RFID, app, WiFi, Face ID : tous les détails pour choisir sans se tromper.</p>
+        </header>
+        <div class="comparatif-grid reveal-on-scroll">
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">SmartLock</h3>
+            <p class="comp-card__price">890 DH</p>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>App</span><span class="feat-yes">Tuya</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles AAA</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">NextLock</h3>
+            <p class="comp-card__price">1 390 DH</p>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>App</span><span class="feat-yes">Tuya</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">NeoLock</h3>
+            <p class="comp-card__price">1 690 DH</p>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>App</span><span class="feat-yes">Tuya</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">FutureLock</h3>
+            <p class="comp-card__price">2 690 DH</p>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>App</span><span class="feat-yes">Tuya</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>USB-C</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">Infinity</h3>
+            <p class="comp-card__price">3 390 DH</p>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>App</span><span class="feat-yes">Wishome</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>USB-C</span></div>
+          </div>
+
+        </div>
+        <div class="comp-cta reveal-on-scroll">
+          <p style="color:var(--color-text-muted);margin-bottom:1.25rem;">Un doute sur le modèle qui correspond à votre porte ? On vous répond en quelques minutes.</p>
+          <a href="https://wa.me/33625287070?text=Bonjour%2C%20je%20voudrais%20comparer%20les%20mod%C3%A8les%20de%20serrures%20%C3%A9lectroniques." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Comparer sur WhatsApp</a>
         </div>
       </div>
     </section>
