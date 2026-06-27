@@ -94,50 +94,43 @@
       border-radius: 12px;
     }
 
-    .comp-table-wrap {
-      overflow-x: auto;
+    .comparatif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
       margin-top: 2rem;
-      border-radius: 12px;
-      border: 1px solid var(--color-border-subtle);
     }
-    .comp-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      min-width: 540px;
-    }
-    .comp-table thead th {
-      padding: 1rem 1.25rem;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--color-accent);
+    .comp-card {
       background: var(--color-surface);
-      text-align: center;
-      border-bottom: 1px solid var(--color-border-subtle);
-      white-space: nowrap;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
     }
-    .comp-table thead th:first-child {
-      text-align: left;
-      color: var(--color-text-muted);
-    }
-    .comp-table tbody tr:nth-child(odd) { background: var(--color-bg-elevated); }
-    .comp-table tbody tr:nth-child(even) { background: var(--color-surface); }
-    .comp-table tbody td {
-      padding: 0.75rem 1.25rem;
-      color: var(--color-text-muted);
-      border-bottom: 1px solid var(--color-border-subtle);
-      text-align: center;
-    }
-    .comp-table tbody td:first-child {
-      text-align: left;
-      font-weight: 500;
+    .comp-card__title {
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--color-text);
-      white-space: nowrap;
+      margin: 0 0 0.5rem;
     }
-    .comp-table tbody tr:last-child td { border-bottom: none; }
-    .feat-yes { color: #22c55e; font-weight: 700; font-size: 1rem; }
-    .feat-no  { color: #374151; font-size: 1rem; }
+    .comp-card__feat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 0.45rem;
+    }
+    .comp-card__feat:first-of-type { border-top: none; padding-top: 0; }
+    .feat-yes { color: #22c55e; font-weight: 700; }
+    .feat-no  { color: #374151; }
     .comp-cta { text-align: center; margin-top: 2.5rem; }
+    @media (max-width: 640px) {
+      .comparatif-grid { grid-template-columns: 1fr; }
+    }
 
     @media (prefers-reduced-motion: no-preference) {
       .page-comparatif .rank-card,
@@ -326,85 +319,68 @@
           <h2>Tableau comparatif des fonctionnalités</h2>
           <p>Repérez en un coup d'œil le modèle qui correspond à votre usage.</p>
         </header>
-        <div class="comp-table-wrap reveal-on-scroll">
-          <table class="comp-table">
-            <thead>
-              <tr>
-                <th scope="col">Fonctionnalité</th>
-                <th scope="col">SmartLock</th>
-                <th scope="col">NextLock</th>
-                <th scope="col">NeoLock</th>
-                <th scope="col">FutureLock</th>
-                <th scope="col">Infinity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Empreinte digitale</td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Code PIN</td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Badge RFID</td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Code temporaire</td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Application mobile</td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Ouverture à distance</td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Reconnaissance faciale</td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-no">✗</span></td>
-                <td><span class="feat-yes">✓</span></td>
-                <td><span class="feat-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Batterie</td>
-                <td>Piles AAA</td>
-                <td>Piles</td>
-                <td>Piles</td>
-                <td>Rechargeable</td>
-                <td>Rechargeable</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="comparatif-grid reveal-on-scroll">
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">SmartLock</h3>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Application</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles AAA</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">NextLock</h3>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Application</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles AA</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">NeoLock</h3>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Application</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-no">✗</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Piles AA</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">FutureLock</h3>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Application</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Rechargeable</span></div>
+          </div>
+
+          <div class="comp-card">
+            <h3 class="comp-card__title">Infinity</h3>
+            <div class="comp-card__feat"><span>Empreinte</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code PIN</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>RFID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Code temporaire</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Application</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>WiFi / Distance</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Face ID</span><span class="feat-yes">✓</span></div>
+            <div class="comp-card__feat"><span>Batterie</span><span>Rechargeable</span></div>
+          </div>
+
         </div>
         <div class="comp-cta reveal-on-scroll">
           <p style="color:var(--color-text-muted);margin-bottom:1.25rem;">Vous avez trouvé votre modèle ? Demandez le prix sur WhatsApp — on vous répond en quelques minutes.</p>
