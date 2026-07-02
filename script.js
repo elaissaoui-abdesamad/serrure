@@ -81,6 +81,31 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Erreur FAQ accordéon:', e);
   }
 
+  // Tracking conversions WhatsApp (délégation unique sur document)
+  try {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+      if (!link) return;
+
+      var buttonText = (link.textContent || '').replace(/\s+/g, ' ').trim();
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'whatsapp_click', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+          button_text: buttonText,
+          transport_type: 'beacon'
+        });
+      }
+
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Contact');
+      }
+    });
+  } catch (e) {
+    console.error('Erreur tracking WhatsApp:', e);
+  }
+
   // Galerie produits
   try {
     document.querySelectorAll('.product-gallery').forEach(function (gallery) {
