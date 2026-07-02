@@ -1959,3 +1959,47 @@ div.faq-answer p {
   transform: none;
   background: transparent;
 }
+/* Bouton WhatsApp flottant (mobile uniquement) */
+.whatsapp-float {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 40;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #25d366, #16a34a);
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(22, 163, 74, 0.45);
+}
+
+.whatsapp-float:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 639px) {
+  .whatsapp-float {
+    display: inline-flex;
+    animation: whatsapp-float-in 0.35s ease-out both;
+  }
+}
+
+@keyframes whatsapp-float-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+  }
+}
