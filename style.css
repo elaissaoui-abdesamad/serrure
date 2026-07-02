@@ -1964,7 +1964,7 @@ div.faq-answer p {
   display: none;
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   z-index: 40;
   width: 56px;
   height: 56px;
@@ -1974,7 +1974,6 @@ div.faq-answer p {
   background: linear-gradient(135deg, #25d366, #16a34a);
   color: #ffffff;
   box-shadow: 0 10px 26px rgba(22, 163, 74, 0.45);
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .whatsapp-float:hover {
