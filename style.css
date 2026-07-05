@@ -724,10 +724,11 @@ select {
 }
 
 .help-choice p {
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
+  max-width: 46ch;
   color: var(--color-text-muted);
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 /* Villes SEO */
