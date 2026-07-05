@@ -1,3 +1,4 @@
+/* Incrémenter ?v= dans les 23 pages HTML à chaque modif CSS/JS */
 :root {
   --color-bg: #050509;
   --color-bg-elevated: #0b0c12;
@@ -378,6 +379,22 @@ select {
   box-shadow:
     0 20px 42px rgba(22, 163, 74, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--color-gold), #e0a92e);
+  color: #0f172a;
+  border-color: rgba(245, 196, 81, 0.65);
+  box-shadow:
+    0 16px 32px rgba(224, 169, 46, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 42px rgba(224, 169, 46, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-full {
