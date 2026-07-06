@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (!thumbImage) return;
 
           mainImage.src = thumbImage.src;
+          if (thumbImage.dataset.alt) mainImage.alt = thumbImage.dataset.alt;
 
           thumbs.forEach(function (t) {
             t.classList.remove('active');
