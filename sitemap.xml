@@ -1,165 +1,144 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://elactronics.ma/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/casablanca.html</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/rabat.html</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/bouznika.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/temara.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/mohammedia.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/kenitra.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/prix-serrure-electronique-maroc.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/meilleure-serrure-electronique-maroc.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/serrure-electronique-fiable.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/marrakech.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/tanger.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/agadir.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/fes.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/meknes.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/sale.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/faq.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/a-propos.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/travailler-avec-nous.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://elactronics.ma/zones-couvertes.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://elactronics.ma/mentions-legales.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://elactronics.ma/cgv.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://elactronics.ma/politique-confidentialite.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 
 </urlset>
