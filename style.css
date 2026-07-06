@@ -152,27 +152,6 @@ select {
   width: 100%;
 }
 
-.header-tel {
-  display: none;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-whatsapp);
-  background: rgba(22, 163, 74, 0.1);
-  border: 1px solid rgba(22, 163, 74, 0.25);
-  border-radius: var(--radius-full);
-  padding: 0.4rem 0.85rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: background var(--transition-fast), border-color var(--transition-fast);
-}
-
-.header-tel:hover {
-  background: rgba(22, 163, 74, 0.18);
-  border-color: rgba(22, 163, 74, 0.45);
-}
-
 /* Menu mobile */
 .nav-toggle {
   display: none;
@@ -354,17 +333,6 @@ select {
   box-shadow: 0 22px 46px rgba(14, 165, 233, 0.45);
 }
 
-.btn-ghost {
-  border-color: rgba(148, 163, 184, 0.35);
-  background: rgba(15, 23, 42, 0.48);
-  color: var(--color-text);
-}
-
-.btn-ghost:hover {
-  border-color: rgba(148, 163, 184, 0.75);
-  background: rgba(15, 23, 42, 0.9);
-}
-
 .btn-whatsapp {
   background: linear-gradient(135deg, #22c55e, #16a34a);
   color: #ecfdf5;
@@ -411,35 +379,6 @@ select {
 .btn-outline-accent:hover {
   border-color: var(--color-accent);
   background: rgba(14, 165, 233, 0.15);
-}
-
-.btn-demand {
-  background: transparent;
-  color: rgba(203, 213, 225, 0.85);
-  border-color: rgba(148, 163, 184, 0.35);
-}
-
-.btn-demand:hover {
-  background: rgba(148, 163, 184, 0.08);
-  border-color: rgba(148, 163, 184, 0.6);
-  color: #f9fafb;
-}
-
-.product-trust-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.85rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-}
-
-.product-trust-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
 }
 
 /* Sections */
@@ -568,12 +507,6 @@ select {
   color: #fff;
 }
 
-.badge-demand {
-  background: rgba(148, 163, 184, 0.28);
-  color: #f1f5f9;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-}
-
 .badge-premium {
   background: linear-gradient(135deg, #b45309, #f59e0b);
   color: #fff;
@@ -698,13 +631,6 @@ select {
   content: "•";
   color: var(--color-accent);
   margin-right: 0.45rem;
-}
-
-.product-reassurance {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin-top: -0.5rem;
-  margin-bottom: 0.8rem;
 }
 
 .help-choice {
@@ -1168,56 +1094,6 @@ div.faq-answer p {
   gap: 0;
 }
 
-.footer-city {
-  font-size: 0.82rem;
-  line-height: 1.75;
-  color: var(--color-text-muted);
-  max-width: 540px;
-  margin: 0 auto 18px;
-}
-
-.footer-city a {
-  color: var(--color-text-muted);
-  text-decoration: none;
-}
-
-.footer-city a:hover {
-  color: var(--color-accent);
-}
-
-.footer-city a[href="zones-couvertes.html"] {
-  color: var(--color-gold);
-  font-weight: 600;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
-  margin-left: 2px;
-}
-
-.footer-city a[href="zones-couvertes.html"]:hover {
-  opacity: 0.75;
-}
-
-.footer-nav {
-  font-size: 0.75rem;
-  opacity: 0.5;
-  padding: 10px 0;
-  border-top: 1px solid rgba(255,255,255,.07);
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  width: 100%;
-  margin-bottom: 14px;
-  line-height: 2.2;
-}
-
-.footer-nav a {
-  color: inherit;
-  margin: 0 0.25rem;
-}
-
-.footer-nav a:hover {
-  color: var(--color-accent);
-  opacity: 1;
-}
-
 .footer-links {
   margin-bottom: 14px;
   font-size: 0.78rem;
@@ -1401,61 +1277,6 @@ div.faq-answer p {
   color: #fef3c7;
 }
 
-.page-comparatif .benefit-card.use-card--smart {
-  border-left: 4px solid #22c55e;
-  background:
-    linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
-    rgba(15, 23, 42, 0.86);
-}
-
-.page-comparatif .benefit-card.use-card--next {
-  border-left: 4px solid var(--color-accent);
-  background:
-    linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
-    rgba(15, 23, 42, 0.86);
-}
-
-.page-comparatif .benefit-card.use-card--neo {
-  border-left: 4px solid #a855f7;
-  background:
-    linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
-    rgba(15, 23, 42, 0.86);
-}
-
-.page-comparatif .benefit-card.use-card--future {
-  border-left: 4px solid #f59e0b;
-  background:
-    linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
-    rgba(15, 23, 42, 0.86);
-}
-
-.page-comparatif .benefit-card.use-card--infinity {
-  border-left: 4px solid var(--color-gold);
-  background:
-    linear-gradient(135deg, rgba(245, 196, 81, 0.14) 0%, transparent 50%),
-    rgba(15, 23, 42, 0.86);
-}
-
-.page-comparatif .accent-smart {
-  color: #bbf7d0;
-}
-
-.page-comparatif .accent-next {
-  color: #bae6fd;
-}
-
-.page-comparatif .accent-neo {
-  color: #e9d5ff;
-}
-
-.page-comparatif .accent-future {
-  color: #fde68a;
-}
-
-.page-comparatif .accent-infinity {
-  color: #fef3c7;
-}
-
 .page-prix .benefit-card.tier-entry,
 .page-prix .benefit-card.model-smart {
   border-left: 4px solid #22c55e;
@@ -1516,20 +1337,6 @@ div.faq-answer p {
   font-size: 0.9rem;
   color: var(--color-text-muted);
   line-height: 1.7;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-  margin-bottom: 2rem;
-  transition: color 0.2s;
-}
-
-.back-link:hover {
-  color: var(--color-accent);
 }
 
 /* Reveal */
@@ -1666,9 +1473,6 @@ div.faq-answer p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .header-tel {
-    display: flex;
-  }
 }
 
 @media (min-width: 768px) {
