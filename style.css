@@ -665,13 +665,13 @@ select {
 
 .villes-seo p {
   font-size: 0.75rem;
-  color: rgba(156, 163, 175, 0.42);
+  color: rgba(156, 163, 175, 0.72);
   margin: 0;
   line-height: 1.9;
 }
 
 .villes-seo a {
-  color: rgba(156, 163, 175, 0.42);
+  color: rgba(156, 163, 175, 0.72);
   transition: color var(--transition-fast);
 }
 
