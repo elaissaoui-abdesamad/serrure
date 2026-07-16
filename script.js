@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!document.querySelector('.whatsapp-float')) {
       var floatBtn = document.createElement('a');
       floatBtn.className = 'whatsapp-float';
-      floatBtn.href = 'https://wa.me/33625287070?text=Bonjour%2C%20j%27aimerais%20des%20informations%20sur%20vos%20serrures%20connect%C3%A9es';
+      floatBtn.href = 'https://wa.me/212720889310?text=Bonjour%2C%20j%27aimerais%20des%20informations%20sur%20vos%20serrures%20connect%C3%A9es';
       floatBtn.target = '_blank';
       floatBtn.rel = 'noopener noreferrer';
       floatBtn.setAttribute('aria-label', 'Contacter Elactronics sur WhatsApp');

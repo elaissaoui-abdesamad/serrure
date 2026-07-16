@@ -28,9 +28,9 @@
 ### Valeurs de référence vérifiées
 
 - **Tracking :** GA4 `G-YG9P3FXJX9` + Meta Pixel `1981751045765597`, identiques sur les 22 pages trackées (chargement différé sur interaction ou 3 s — bon pour la perf). Exception : `cgv.html` (voir P3-8).
-- **Numéro unique :** `+33625287070` partout (wa.me + JSON-LD). Aucune divergence.
+- **Numéro unique :** `+212720889310` partout (wa.me + JSON-LD). Aucune divergence.
 - **Prix (source de vérité `index.html`) :** SmartLock 890 (barré 1 190), NextLock 1 390 (1 790), NeoLock 1 790 (2 190), FutureLock 2 690 (3 290), Infinity 3 390 (3 790) DH. **Vérifié identique sur les 13 pages produits + wa.me + page prix : 0 divergence.**
-- **Checksum wa.me : 135 occurrences** (134 dans les HTML + 1 injectée par `script.js`). 100 % bien formées (`https://wa.me/33625287070?text=…` encodé). Détail : index 9, chaque page ville 8, zones-couvertes 13, meilleure 4, travailler 3, faq 2, prix 2, fiable 2, a-propos 1, mentions-légales 1, politique 1, cgv 0.
+- **Checksum wa.me : 135 occurrences** (134 dans les HTML + 1 injectée par `script.js`). 100 % bien formées (`https://wa.me/212720889310?text=…` encodé). Détail : index 9, chaque page ville 8, zones-couvertes 13, meilleure 4, travailler 3, faq 2, prix 2, fiable 2, a-propos 1, mentions-légales 1, politique 1, cgv 0.
 
 ### Contrôles passés sans anomalie (prouvés)
 
@@ -157,11 +157,11 @@ par :
 6. **Correction :** passer les 12 boutons en `btn btn-whatsapp` (le libellé court « WhatsApp » peut rester ; l'ajout du SVG est optionnel vu la taille réduite `.city-card-cta .btn`).
 7. **Correctif exact** (motif à répliquer 12×, exemple Casablanca l. 440) — remplacer :
 ```html
-            <a href="https://wa.me/33625287070?text=..." class="btn btn-outline-accent" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/212720889310?text=..." class="btn btn-outline-accent" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 ```
 par :
 ```html
-            <a href="https://wa.me/33625287070?text=..." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/212720889310?text=..." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 ```
 (en conservant le `?text=` propre à chaque ville).
 
@@ -215,7 +215,7 @@ class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
 6. **Correction :** ajouter `rel="noopener"`.
 7. **Correctif exact :**
 ```html
-<a href="https://wa.me/33625287070" target="_blank" rel="noopener">WhatsApp</a>,
+<a href="https://wa.me/212720889310" target="_blank" rel="noopener">WhatsApp</a>,
 …
 <a href="https://www.instagram.com/elactronics.ma/" target="_blank" rel="noopener">Instagram</a>
 ```
@@ -238,7 +238,7 @@ class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
   "@type": "LocalBusiness",
   "name": "Elactronics",
   "url": "https://elactronics.ma/agadir.html",
-  "telephone": "+33625287070",
+  "telephone": "+212720889310",
   "logo": "https://elactronics.ma/images/logo-elactronics.webp",
   "description": "Vente et installation de serrures électroniques intelligentes à Agadir.",
   "areaServed": { "@type": "City", "name": "Agadir" },
@@ -301,7 +301,7 @@ class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
 
 ### P3-6 — Pages légales : liens WhatsApp sans message pré-rempli
 
-- **P3 · Fichiers :** `mentions-legales.html:124`, `politique-confidentialite.html:61` (`https://wa.me/33625287070` nu).
+- **P3 · Fichiers :** `mentions-legales.html:124`, `politique-confidentialite.html:61` (`https://wa.me/212720889310` nu).
 - **Impact :** mineur (contexte légal) mais incohérent avec les 133 autres liens ; un `?text=` générique améliore la qualification.
 - **Correctif :** ajouter `?text=Bonjour%2C%20j%27aimerais%20des%20informations%20sur%20vos%20serrures%20connect%C3%A9es`.
 
