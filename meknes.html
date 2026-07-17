@@ -43,6 +43,13 @@
       backdrop-filter: blur(14px);
       border-top: 1px solid rgba(148, 163, 184, 0.15);
       text-decoration: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mk-sticky-bar.mk-bar-hidden {
+      transform: translateY(110%);
+      opacity: 0;
+      pointer-events: none;
     }
 
     .mk-sticky-info {
@@ -89,7 +96,7 @@
     @media (max-width: 639px) {
       .mk-sticky-bar {
         display: flex;
-        animation: mk-sticky-in 0.35s ease-out both;
+        animation: mk-sticky-in 0.35s ease-out backwards;
       }
 
       body {
@@ -103,7 +110,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .mk-sticky-bar { animation: none; }
+      .mk-sticky-bar { animation: none; transition: none; }
     }
   </style>
 
@@ -697,6 +704,101 @@
       Commander sur WhatsApp
     </span>
   </a>
+
+  <script>
+    (function () {
+      try {
+        if (!('IntersectionObserver' in window)) return;
+
+        var bar = document.querySelector('.mk-sticky-bar');
+        if (!bar) return;
+
+        var titleEl = bar.querySelector('.mk-sticky-title');
+        var priceEl = bar.querySelector('.mk-sticky-price');
+        if (!titleEl || !priceEl) return;
+
+        var genericTitle = titleEl.textContent;
+        var genericPrice = priceEl.textContent;
+        var genericHref = bar.getAttribute('href');
+
+        var cards = Array.prototype.slice.call(
+          document.querySelectorAll('#produits-meknes .product-card')
+        );
+
+        function cardData(card) {
+          var nameEl = card.querySelector('h3');
+          var priceNewEl = card.querySelector('.price-new');
+          if (!nameEl || !priceNewEl) return null;
+          var name = nameEl.textContent.replace(/\s+/g, ' ').trim();
+          var price = priceNewEl.textContent.replace(/\s+/g, ' ').trim();
+          var shortName = name.replace(/^Serrure\s+/i, '');
+          var msg = 'Bonjour, je veux commander la ' + shortName + ' à ' + price +
+            ' à Meknès. Quelle disponibilité pour une installation en 2h ?';
+          return {
+            title: name,
+            price: price + ' — pose incluse',
+            href: 'https://wa.me/212720889310?text=' + encodeURIComponent(msg)
+          };
+        }
+
+        function setContext(card) {
+          var data = card ? cardData(card) : null;
+          if (data) {
+            titleEl.textContent = data.title;
+            priceEl.textContent = data.price;
+            bar.setAttribute('href', data.href);
+          } else {
+            titleEl.textContent = genericTitle;
+            priceEl.textContent = genericPrice;
+            bar.setAttribute('href', genericHref);
+          }
+        }
+
+        // 1) Barre masquée tant qu'un CTA "Commander" de carte produit est visible
+        var visibleCtas = new Set();
+        var ctaObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) visibleCtas.add(en.target);
+            else visibleCtas.delete(en.target);
+          });
+          bar.classList.toggle('mk-bar-hidden', visibleCtas.size > 0);
+        }, { threshold: 0 });
+
+        cards.forEach(function (card) {
+          var cta = card.querySelector('a[href*="wa.me"]');
+          if (cta) ctaObserver.observe(cta);
+        });
+
+        // 2) Contexte dynamique : dernière carte majoritairement visible
+        var majorityCards = new Set();
+        var lastCard = null;
+        var cardObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            var majority = en.isIntersecting &&
+              (en.intersectionRatio >= 0.5 ||
+                en.intersectionRect.height >= window.innerHeight * 0.6);
+            if (majority) {
+              majorityCards.add(en.target);
+              lastCard = en.target;
+            } else {
+              majorityCards.delete(en.target);
+            }
+          });
+          var current = null;
+          if (majorityCards.size > 0) {
+            current = majorityCards.has(lastCard)
+              ? lastCard
+              : Array.from(majorityCards).pop();
+          }
+          setContext(current);
+        }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+        cards.forEach(function (card) { cardObserver.observe(card); });
+      } catch (e) {
+        console.error('Erreur sticky bar Meknès:', e);
+      }
+    })();
+  </script>
 
   <script>
     let trackingLoaded = false;
