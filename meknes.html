@@ -38,7 +38,7 @@
       z-index: 40;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.6rem 0.9rem calc(0.6rem + env(safe-area-inset-bottom));
+      padding: 0.45rem 0.75rem calc(0.45rem + env(safe-area-inset-bottom));
       background: rgba(5, 5, 9, 0.96);
       backdrop-filter: blur(14px);
       border-top: 1px solid rgba(148, 163, 184, 0.15);
@@ -52,38 +52,13 @@
       pointer-events: none;
     }
 
-    .mk-sticky-info {
-      min-width: 0;
-      flex: 0 1 auto;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.3;
-    }
-
-    .mk-sticky-title {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #f8fafc;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .mk-sticky-price {
-      font-size: 0.72rem;
-      color: #94a3b8;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
     .mk-sticky-cta {
       flex: 1 1 auto;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.45rem;
-      padding: 0.85rem 1rem;
+      padding: 0.7rem 1rem;
       border-radius: 999px;
       background: linear-gradient(135deg, #25d366, #16a34a);
       color: #ffffff;
@@ -96,21 +71,15 @@
     @media (max-width: 639px) {
       .mk-sticky-bar {
         display: flex;
-        animation: mk-sticky-in 0.35s ease-out backwards;
       }
 
       body {
-        padding-bottom: calc(76px + env(safe-area-inset-bottom));
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
       }
     }
 
-    @keyframes mk-sticky-in {
-      from { opacity: 0; transform: translateY(100%); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      .mk-sticky-bar { animation: none; transition: none; }
+      .mk-sticky-bar { transition: none; }
     }
   </style>
 
@@ -693,15 +662,11 @@
     href="https://wa.me/212720889310?text=Bonjour%2C%20je%20veux%20commander%20une%20serrure%20%C3%A9lectronique%20%C3%A0%20Mekn%C3%A8s.%20Quelle%20disponibilit%C3%A9%20pour%20une%20installation%20en%202h%20%3F"
     target="_blank" rel="noopener noreferrer"
     aria-label="Commander une serrure électronique à Meknès sur WhatsApp">
-    <span class="mk-sticky-info">
-      <span class="mk-sticky-title">Serrure électronique à Meknès</span>
-      <span class="mk-sticky-price">À partir de 890 DH — pose incluse</span>
-    </span>
     <span class="mk-sticky-cta">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.49 0 .16 5.34.16 11.89c0 2.09.55 4.14 1.59 5.94L0 24l6.3-1.65a11.87 11.87 0 005.69 1.45h.01c6.55 0 11.88-5.34 11.89-11.89a11.82 11.82 0 00-3.47-8.43zM12 21.3c-1.78 0-3.52-.48-5.04-1.39l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 01-1.51-5.27c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.98 2.89a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.18-1.42-.08-.12-.27-.2-.57-.35z" />
       </svg>
-      Commander sur WhatsApp
+      <span class="mk-sticky-label">Commander sur WhatsApp</span>
     </span>
   </a>
 
@@ -713,13 +678,16 @@
         var bar = document.querySelector('.mk-sticky-bar');
         if (!bar) return;
 
-        var titleEl = bar.querySelector('.mk-sticky-title');
-        var priceEl = bar.querySelector('.mk-sticky-price');
-        if (!titleEl || !priceEl) return;
+        var labelEl = bar.querySelector('.mk-sticky-label');
+        if (!labelEl) return;
 
-        var genericTitle = titleEl.textContent;
-        var genericPrice = priceEl.textContent;
+        var genericLabel = labelEl.textContent;
         var genericHref = bar.getAttribute('href');
+
+        // État initial masqué (posé avant le premier paint) : le premier
+        // callback des observers rétablit l'état correct. Sans JS, la barre
+        // reste visible (fallback).
+        bar.classList.add('mk-bar-hidden');
 
         var cards = Array.prototype.slice.call(
           document.querySelectorAll('#produits-meknes .product-card')
@@ -735,8 +703,7 @@
           var msg = 'Bonjour, je veux commander la ' + shortName + ' à ' + price +
             ' à Meknès. Quelle disponibilité pour une installation en 2h ?';
           return {
-            title: name,
-            price: price + ' — pose incluse',
+            label: 'Commander la ' + shortName + ' · ' + price,
             href: 'https://wa.me/212720889310?text=' + encodeURIComponent(msg)
           };
         }
@@ -744,17 +711,15 @@
         function setContext(card) {
           var data = card ? cardData(card) : null;
           if (data) {
-            titleEl.textContent = data.title;
-            priceEl.textContent = data.price;
+            labelEl.textContent = data.label;
             bar.setAttribute('href', data.href);
           } else {
-            titleEl.textContent = genericTitle;
-            priceEl.textContent = genericPrice;
+            labelEl.textContent = genericLabel;
             bar.setAttribute('href', genericHref);
           }
         }
 
-        // 1) Barre masquée tant qu'un CTA "Commander" de carte produit est visible
+        // 1) Barre masquée tant qu'un CTA WhatsApp de la page est visible
         var visibleCtas = new Set();
         var ctaObserver = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) {
@@ -764,9 +729,11 @@
           bar.classList.toggle('mk-bar-hidden', visibleCtas.size > 0);
         }, { threshold: 0 });
 
-        cards.forEach(function (card) {
-          var cta = card.querySelector('a[href*="wa.me"]');
-          if (cta) ctaObserver.observe(cta);
+        var allCtas = document.querySelectorAll(
+          'a[href*="wa.me"]:not(.mk-sticky-bar):not(.whatsapp-float)'
+        );
+        Array.prototype.forEach.call(allCtas, function (cta) {
+          ctaObserver.observe(cta);
         });
 
         // 2) Contexte dynamique : dernière carte majoritairement visible
