@@ -1884,7 +1884,7 @@ div.faq-answer p {
 .article-body h3 { margin: 1.4rem 0 0.5rem; }
 .article-body p { color: var(--color-text-muted); line-height: 1.7; margin: 0 0 1rem; }
 .article-body p strong { color: var(--color-text); }
-.article-body a { color: var(--color-accent); }
+.article-body a:not(.btn) { color: var(--color-accent); }
 .article-cta { background: var(--color-accent-soft); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: var(--radius-lg); padding: 1.25rem 1.4rem; margin: 1.8rem 0; }
 .article-cta p { margin: 0 0 0.8rem; }
 .article-cta p strong { color: var(--color-text); }
