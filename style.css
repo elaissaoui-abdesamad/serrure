@@ -1894,3 +1894,19 @@ div.faq-answer p {
 .article-related .blog-card-body h3 a { color: var(--color-text); text-decoration: none; }
 .article-related .blog-card-body h3 a:hover { color: var(--color-accent); }
 .stars-google { color:#FBBC04; letter-spacing:2px; }
+
+/* Lien fiche produit dans les cartes */
+.product-fiche-link {
+  margin: -0.4rem 0 0.95rem;
+  font-size: 0.82rem;
+}
+
+.product-fiche-link a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.product-fiche-link a:hover {
+  color: var(--color-gold);
+}
