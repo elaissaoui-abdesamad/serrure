@@ -1910,3 +1910,14 @@ div.faq-answer p {
 .product-fiche-link a:hover {
   color: var(--color-gold);
 }
+
+/* Card media/title link — accès fiche */
+.card-media-link { display: block; text-decoration: none; color: inherit; }
+.card-title-link { color: inherit; text-decoration: none; position: relative; }
+.card-title-link::after {
+  content: "›"; display: inline-block; margin-left: 6px;
+  color: var(--color-accent); opacity: 0; transform: translateX(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease; font-weight: 400;
+}
+.product-card:hover .card-title-link { color: #7dd3fc; }
+.product-card:hover .card-title-link::after { opacity: 1; transform: translateX(0); }
