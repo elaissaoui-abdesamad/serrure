@@ -1921,3 +1921,22 @@ div.faq-answer p {
 }
 .product-card:hover .card-title-link { color: #7dd3fc; }
 .product-card:hover .card-title-link::after { opacity: 1; transform: translateX(0); }
+
+/* Rank-card fiche link */
+.rank-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+.rank-card-link::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+.rank-card-link:hover { color: var(--color-gold); }
+.rank-card-link:hover::after { transform: translateX(3px); }
