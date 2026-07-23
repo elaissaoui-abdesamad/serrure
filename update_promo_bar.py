@@ -22,7 +22,7 @@ PROMO_AMOUNT   = "600"   # DH — seule valeur à changer pour un nouveau montan
 PROMO_VERSION  = "v1"    # incrémenter à CHAQUE changement de montant/texte
                          # (fait réapparaître le bandeau chez ceux qui l'ont fermé)
 WA_EXPECTED    = 160     # invariant liens wa.me sur l'ensemble du site
-CSS_VERSION    = "20260723"  # bump a chaque modif de style.css (cache CDN)
+CSS_VERSION    = "20260724"  # bump a chaque modif de style.css (cache CDN)
 REPO_DIR       = "."     # racine du clone frais du repo `serrure`
 
 # Pages qui ne reçoivent JAMAIS le bandeau (aucun modèle en promo présenté)
@@ -109,6 +109,7 @@ CSS_BLOCK = f"""{CSS_START}
   align-items:center;justify-content:center;background:none;border:0;padding:0;cursor:pointer;
   color:var(--color-text);opacity:.55;transition:opacity .18s ease}}
 .promo-bar__close:hover,.promo-bar__close:focus-visible{{opacity:1}}
+.promo-bar__close::after{{content:"";position:absolute;top:0;bottom:0;left:-8px;right:0}}
 .promo-bar__short{{display:none}}
 @media(max-width:640px){{
   .promo-bar{{height:38px}}
