@@ -69,9 +69,49 @@
     ]
   }
   </script>
+<!-- PROMO-HEAD:START -->
+<style>.promo-hidden .promo-bar{display:none}</style>
+<script>(function(){try{var d=localStorage.getItem("el_promo_v1");
+if(d&&Date.now()-(+d)<2592e6)document.documentElement.className+=" promo-hidden";}catch(e){}})();</script>
+<!-- PROMO-HEAD:END -->
 </head>
 
 <body>
+<!-- PROMO-BAR:START -->
+<div class="promo-bar" id="promoBar">
+  <a class="promo-bar__link" href="/index.html#produits" data-promo-target="#produits">
+    <span class="promo-bar__dot" aria-hidden="true"></span>
+    <span class="promo-bar__txt"><strong>Offres en cours</strong>
+      <span class="promo-bar__sep" aria-hidden="true">·</span>
+      <span class="promo-bar__full">Économisez jusqu'à <b>600&nbsp;DH</b> sur nos serrures haut de gamme</span>
+      <span class="promo-bar__short">Économisez jusqu'à <b>600&nbsp;DH</b></span></span>
+    <span class="promo-bar__cta"><span class="promo-bar__cta-l">Voir les offres</span>
+      <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></span>
+  </a>
+  <button class="promo-bar__close" type="button" aria-label="Fermer le bandeau promotionnel">
+    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+<script>(function(){
+  var bar=document.getElementById('promoBar');if(!bar)return;
+  var link=bar.querySelector('.promo-bar__link');
+  link.addEventListener('click',function(e){
+    var t=document.querySelector(link.getAttribute('data-promo-target'));
+    if(t){e.preventDefault();
+      var h=document.querySelector('header');
+      var off=(h?h.offsetHeight:0)+8;
+      var y=t.getBoundingClientRect().top+window.pageYOffset-off;
+      var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:y,behavior:r?'auto':'smooth'});}
+    if(window.gtag)gtag('event','promo_bar_click',{transport_type:'beacon'});
+  });
+  bar.querySelector('.promo-bar__close').addEventListener('click',function(){
+    bar.style.display='none';
+    try{localStorage.setItem('el_promo_v1',String(Date.now()));}catch(e){}
+    if(window.gtag)gtag('event','promo_bar_dismiss',{transport_type:'beacon'});
+  });
+})();</script>
+<!-- PROMO-BAR:END -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand"><a href="index.html"
