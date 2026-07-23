@@ -1963,6 +1963,7 @@ div.faq-answer p {
   align-items:center;justify-content:center;background:none;border:0;padding:0;cursor:pointer;
   color:var(--color-text);opacity:.55;transition:opacity .18s ease}
 .promo-bar__close:hover,.promo-bar__close:focus-visible{opacity:1}
+.promo-bar__close::after{content:"";position:absolute;top:0;bottom:0;left:-8px;right:0}
 .promo-bar__short{display:none}
 @media(max-width:640px){
   .promo-bar{height:38px}
