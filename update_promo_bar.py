@@ -22,6 +22,7 @@ PROMO_AMOUNT   = "600"   # DH — seule valeur à changer pour un nouveau montan
 PROMO_VERSION  = "v1"    # incrémenter à CHAQUE changement de montant/texte
                          # (fait réapparaître le bandeau chez ceux qui l'ont fermé)
 WA_EXPECTED    = 160     # invariant liens wa.me sur l'ensemble du site
+CSS_VERSION    = "20260723"  # bump a chaque modif de style.css (cache CDN)
 REPO_DIR       = "."     # racine du clone frais du repo `serrure`
 
 # Pages qui ne reçoivent JAMAIS le bandeau (aucun modèle en promo présenté)
@@ -87,9 +88,11 @@ BAR_BLOCK = f"""{BAR_START}
 {BAR_END}"""
 
 CSS_BLOCK = f"""{CSS_START}
+@keyframes promo-bar-in{{from{{transform:translateY(-100%);opacity:0}}
+  to{{transform:translateY(0);opacity:1}}}}
 .promo-bar{{position:relative;box-sizing:border-box;width:100%;height:40px;
   background:var(--color-bg-elevated);border-bottom:1px solid rgba(245,196,81,.25);
-  overflow:hidden}}
+  overflow:hidden;animation:promo-bar-in .2s cubic-bezier(.22,.61,.36,1) both}}
 .promo-bar__link{{display:flex;align-items:center;justify-content:center;gap:10px;height:100%;
   padding:0 44px 0 16px;text-decoration:none;color:var(--color-text);font-size:13px;line-height:1;
   letter-spacing:.005em;white-space:nowrap}}
@@ -114,7 +117,8 @@ CSS_BLOCK = f"""{CSS_START}
   .promo-bar__short{{display:inline}}
   .promo-bar__close{{width:34px}}
 }}
-@media(prefers-reduced-motion:reduce){{.promo-bar *{{transition:none!important}}}}
+@media(prefers-reduced-motion:reduce){{.promo-bar,.promo-bar *{{
+  transition:none!important;animation:none!important}}}}
 {CSS_END}"""
 
 # ============================== OUTILS ==============================
@@ -137,6 +141,17 @@ def replace_between(text, start, end, block):
 
 def wa_count(root: pathlib.Path) -> int:
     return sum(read(p).count("wa.me/") for p in html_pages(root))
+
+def bump_css_version(root: pathlib.Path) -> int:
+    pat = re.compile(r"style\.css\?v=\d+")
+    n = 0
+    for p in html_pages(root):
+        t = read(p)
+        new = pat.sub(f"style.css?v={CSS_VERSION}", t)
+        if new != t:
+            n += len(pat.findall(t))
+            write(p, new)
+    return n
 
 def target_pages(root: pathlib.Path):
     """Pages incluses / exclues, selon le critère 'présente un modèle en promo'."""
@@ -243,6 +258,8 @@ def apply(root: pathlib.Path):
         ctxt = ctxt.rstrip() + "\n\n" + CSS_BLOCK + "\n"
     write(css, ctxt)
     print(f"[CSS] bloc {'mis à jour' if done else 'ajouté'} dans {css.name}")
+    nv = bump_css_version(root)
+    print(f"[CACHE] {nv} liens style.css?v= bumpes vers {CSS_VERSION}")
 
     # --- Vérifications post-écriture ---
     n1 = wa_count(root)
