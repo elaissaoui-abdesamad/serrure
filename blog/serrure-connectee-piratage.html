@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Une serrure connectée, est-ce que ça se pirate ? | Elactronics</title>
+  <meta name="description" content="Une serrure connectée peut-elle être piratée ? Chiffrement Tuya, clonage de badge RFID, brute-force du code PIN, reconnaissance faciale : les vrais risques, ceux qui n'existent pas, et comment s'en protéger." />
+  <meta name="author" content="Elactronics" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://elactronics.ma/blog/serrure-connectee-piratage.html" />
+
+  <meta property="og:title" content="Une serrure connectée, est-ce que ça se pirate ?" />
+  <meta property="og:description" content="Une serrure connectée peut-elle être piratée ? Chiffrement Tuya, clonage de badge RFID, brute-force du code PIN, reconnaissance faciale : les vrais risques, ceux qui n'existent pas, et comment s'en protéger." />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-28" />
+  <meta property="og:url" content="https://elactronics.ma/blog/serrure-connectee-piratage.html" />
+  <meta property="og:image" content="https://elactronics.ma/images/serrure-electronique-futurelock-maroc.webp" />
+  <meta property="og:locale" content="fr_MA" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="/style.css?v=20260724" />
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Une serrure connectée, est-ce que ça se pirate ?",
+  "description": "Une serrure connectée peut-elle être piratée ? Chiffrement Tuya, clonage de badge RFID, brute-force du code PIN, reconnaissance faciale : les vrais risques, ceux qui n'existent pas, et comment s'en protéger.",
+  "image": "https://elactronics.ma/images/serrure-electronique-futurelock-maroc.webp",
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28",
+  "inLanguage": "fr-MA",
+  "mainEntityOfPage": "https://elactronics.ma/blog/serrure-connectee-piratage.html",
+  "author": {
+    "@type": "Organization",
+    "name": "Elactronics",
+    "url": "https://elactronics.ma"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Elactronics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://elactronics.ma/images/logo-elactronics.webp"
+    }
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://elactronics.ma/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://elactronics.ma/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Une serrure connectée, est-ce que ça se pirate ?", "item": "https://elactronics.ma/blog/serrure-connectee-piratage.html" }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelqu'un peut-il ouvrir ma serrure connectée à distance depuis Internet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En pratique, non — pas en s'attaquant à la serrure elle-même. La serrure n'attend aucune connexion entrante : c'est elle qui contacte le serveur, par un canal chiffré. Le seul chemin réaliste, c'est votre compte Tuya. Avec un mot de passe fort et unique, non réutilisé ailleurs, ce chemin se referme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon badge RFID peut-il être copié ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un badge basse fréquence non chiffré, oui : un duplicateur du commerce suffit, s'il a le badge en main quelques secondes. C'est pour cela que le badge doit rester un confort, jamais votre seule protection : ne le laissez pas dans la boîte aux lettres ou la voiture, et supprimez immédiatement un badge perdu depuis l'application."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Une photo peut-elle tromper la reconnaissance faciale ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pas sur un module sérieux. La FutureLock ne compare pas une image plate : elle analyse le relief du visage à l'infrarouge, ce qui lui permet aussi de fonctionner dans le noir. Une photo sur écran ou sur papier n'a aucun relief : elle est rejetée."
+      }
+    }
+  ]
+}
+</script>
+<!-- PROMO-HEAD:START -->
+<style>.promo-hidden .promo-bar{display:none}</style>
+<script>(function(){try{var d=localStorage.getItem("el_promo_v1");
+if(d&&Date.now()-(+d)<2592e6)document.documentElement.className+=" promo-hidden";}catch(e){}})();</script>
+<!-- PROMO-HEAD:END -->
+</head>
+<body>
+<!-- PROMO-BAR:START -->
+<div class="promo-bar" id="promoBar">
+  <a class="promo-bar__link" href="/index.html#produits" data-promo-target="#produits">
+    <span class="promo-bar__dot" aria-hidden="true"></span>
+    <span class="promo-bar__txt"><strong>Offres en cours</strong>
+      <span class="promo-bar__sep" aria-hidden="true">·</span>
+      <span class="promo-bar__full">Économisez jusqu'à <b>600&nbsp;DH</b> sur nos serrures haut de gamme</span>
+      <span class="promo-bar__short">Économisez jusqu'à <b>600&nbsp;DH</b></span></span>
+    <span class="promo-bar__cta"><span class="promo-bar__cta-l">Voir les offres</span>
+      <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></span>
+  </a>
+  <button class="promo-bar__close" type="button" aria-label="Fermer le bandeau promotionnel">
+    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+<script>(function(){
+  var bar=document.getElementById('promoBar');if(!bar)return;
+  var link=bar.querySelector('.promo-bar__link');
+  link.addEventListener('click',function(e){
+    var t=document.querySelector(link.getAttribute('data-promo-target'));
+    if(t){e.preventDefault();
+      var h=document.querySelector('header');
+      var off=(h?h.offsetHeight:0)+8;
+      var y=t.getBoundingClientRect().top+window.pageYOffset-off;
+      var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:y,behavior:r?'auto':'smooth'});}
+    if(window.gtag)gtag('event','promo_bar_click',{transport_type:'beacon'});
+  });
+  bar.querySelector('.promo-bar__close').addEventListener('click',function(){
+    bar.style.display='none';
+    try{localStorage.setItem('el_promo_v1',String(Date.now()));}catch(e){}
+    if(window.gtag)gtag('event','promo_bar_dismiss',{transport_type:'beacon'});
+  });
+})();</script>
+<!-- PROMO-BAR:END -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/index.html" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+          <img src="/images/logo-elactronics.webp" width="56" height="56" alt="Logo Elactronics" class="brand-logo">
+          <span class="brand-text">
+            <span class="brand-name">Elactronics</span>
+            <span class="brand-sub">Serrures électroniques</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="/index.html">Accueil</a>
+        <a href="/index.html#produits">Produits</a>
+        <a href="/meilleure-serrure-electronique-maroc.html">Comparatif</a>
+        <a href="/serrure-electronique-fiable.html">Fiabilité</a>
+        <a href="/zones-couvertes.html">Villes</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/travailler-avec-nous.html">Travailler avec nous</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="section">
+      <div class="container article-container">
+
+        <nav class="blog-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/index.html">Accueil</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Serrure connectée et piratage</span>
+        </nav>
+
+        <header class="article-header">
+          <h1>Une serrure connectée, est-ce que ça se pirate ?</h1>
+          <p class="blog-card-meta article-meta">
+            <time datetime="2026-07-28">28 juillet 2026</time>
+            <span>&middot;</span>
+            <span>7 min de lecture</span>
+            <span>&middot;</span>
+            <span>Par Elactronics</span>
+          </p>
+        </header>
+
+        <figure class="article-hero">
+          <img src="/images/serrure-electronique-futurelock-maroc.webp" width="1200" height="675" alt="Serrure connectée FutureLock avec reconnaissance faciale et chiffrement Tuya" fetchpriority="high" />
+        </figure>
+
+        <nav class="article-toc" aria-label="Sommaire">
+          <strong>Sommaire</strong>
+          <ol>
+            <li><a href="#s-1">Le vrai risque n'est pas celui qu'on croit</a></li>
+            <li><a href="#s-2">Chiffrement et cloud Tuya : ce qui protège la connexion</a></li>
+            <li><a href="#s-3">Badges RFID et codes PIN : clonage, brute-force, et comment on s'en protège</a></li>
+            <li><a href="#s-4">WiFi ou Bluetooth : ce que ça change pour la sécurité</a></li>
+            <li><a href="#s-5">Reconnaissance faciale : pourquoi c'est le plus dur à contourner</a></li>
+            <li><a href="#s-6">Questions fréquentes</a></li>
+          </ol>
+        </nav>
+
+        <div class="article-body">
+          <p>C'est <strong>la</strong> question qui revient avant chaque achat&nbsp;: en remplaçant une serrure mécanique par une serrure connectée, est-ce qu'on n'ouvre pas une porte… aux pirates&nbsp;? La réponse honnête tient en deux temps. <strong>Oui</strong>, une serrure connectée est un objet électronique, et tout objet électronique peut théoriquement être attaqué. <strong>Mais pas du tout de la manière qu'on imagine</strong>&nbsp;: le scénario du hacker qui ouvre votre porte depuis un ordinateur à l'autre bout du monde n'est pas le vrai sujet. Voici ce qui est réellement attaquable, ce qui ne l'est pas, et ce qui dépend de vous.</p>
+
+          <h2 id="s-1">Le vrai risque n'est pas celui qu'on croit</h2>
+          <p>Commençons par démonter le scénario de film. Pour ouvrir votre porte «&nbsp;à distance&nbsp;», il faudrait que votre serrure accepte des connexions venues d'Internet. Ce n'est pas ainsi qu'elle fonctionne. Une serrure connectée <strong>n'écoute rien</strong>&nbsp;: elle n'a pas d'adresse publique, pas de port ouvert, rien qui traîne sur le réseau. C'est <em>elle</em> qui part contacter le serveur, dans un tunnel chiffré, pour dire «&nbsp;je suis là&nbsp;» et récupérer vos éventuelles commandes. Il n'y a pas de poignée à saisir de l'extérieur.</p>
+          <p>Les incidents réels, eux, ressemblent beaucoup moins à du piratage qu'à de la négligence. Dans l'ordre de fréquence&nbsp;:</p>
+          <p>&mdash; un <strong>code trop simple</strong>&nbsp;: 1234, une année de naissance, ou le même code que le digicode de l'immeuble&nbsp;;<br />
+          &mdash; une <strong>configuration initiale bâclée</strong>&nbsp;: le code administrateur d'usine jamais changé, ou un accès laissé actif après un déménagement&nbsp;;<br />
+          &mdash; un <strong>code observé</strong>, tout simplement, par-dessus l'épaule ou grâce aux traces de doigts sur le clavier&nbsp;;<br />
+          &mdash; du <strong>matériel bas de gamme</strong> acheté sans marque ni suivi, dont personne ne corrigera jamais les défauts&nbsp;;<br />
+          &mdash; et l'attaque la plus banale de toutes, la <strong>force brute physique</strong> — pied-de-biche, perceuse — qui n'a strictement rien d'informatique et concerne <em>aussi</em> les serrures classiques.</p>
+          <p>Autrement dit&nbsp;: le maillon faible n'est presque jamais le chiffrement, mais la configuration, l'habitude et la qualité du matériel — trois points qui se maîtrisent. Nous passons en revue les autres craintes fréquentes (batterie, application, SAV) dans notre page sur <a href="/serrure-electronique-fiable.html">la fiabilité réelle d'une serrure électronique</a>&nbsp;; ici, on reste sur la sécurité pure.</p>
+
+          <h2 id="s-2">Chiffrement et cloud Tuya : ce qui protège la connexion</h2>
+          <p>Nos modèles connectés s'appuient sur l'écosystème <strong>Tuya</strong>, l'une des plateformes d'objets connectés les plus déployées au monde. Concrètement, cela veut dire trois choses.</p>
+          <p><strong>1. Tout ce qui circule est chiffré.</strong> Les échanges entre la serrure, votre téléphone et les serveurs passent par des canaux chiffrés de bout en bout du trajet. Quelqu'un qui capterait le trafic WiFi de l'immeuble ne récupérerait pas votre code&nbsp;: il verrait passer un flux illisible.</p>
+          <p><strong>2. Votre code n'est pas un mot de passe qui voyage.</strong> Les identifiants d'accès physiques (code, empreinte, visage) sont gérés <em>dans</em> la serrure. Ils ne sont pas expédiés en clair à chaque ouverture pour être validés ailleurs&nbsp;: la vérification est locale, immédiate, et elle continue même si la connexion tombe.</p>
+          <p><strong>3. L'appairage est lié à l'appareil.</strong> Chaque serrure est associée à votre compte lors de l'installation, avec ses propres clés. Un voisin qui achèterait le même modèle ne pourrait pas «&nbsp;prendre la main&nbsp;» sur la vôtre depuis son application.</p>
+          <p>Reste la part qui vous appartient, et il faut le dire clairement&nbsp;: <strong>le point le plus sensible du système, c'est votre compte</strong>. Si quelqu'un connaît votre e-mail et votre mot de passe, il n'a rien à «&nbsp;pirater&nbsp;» — il lui suffit de se connecter. D'où trois réflexes qui valent tous les chiffrements du monde&nbsp;: un <strong>mot de passe fort et unique</strong>, jamais recyclé d'un autre site&nbsp;; <strong>ne pas partager le compte principal</strong> (créez des accès invités plutôt que de prêter vos identifiants)&nbsp;; et <strong>garder les notifications activées</strong>, pour voir immédiatement une ouverture qui n'aurait pas lieu d'être.</p>
+
+          <h2 id="s-3">Badges RFID et codes PIN : clonage, brute-force, et comment on s'en protège</h2>
+          <p>C'est là que se situent les vraies faiblesses techniques — et autant les nommer.</p>
+          <p><strong>Le badge RFID peut être copié.</strong> Les badges d'entrée de gamme, en basse fréquence et sans chiffrement, se dupliquent en quelques secondes avec un appareil qu'on trouve pour quelques centaines de dirhams. C'est une réalité du format, pas une faille exotique. La parade n'est pas de fuir le badge, qui reste très pratique&nbsp;: c'est de le traiter pour ce qu'il est, un <strong>confort, pas une protection ultime</strong>. Ne le laissez pas dans la boîte aux lettres, sous le paillasson ou dans la voiture&nbsp;; et en cas de perte, <strong>supprimez-le depuis l'application</strong> — il devient inerte instantanément, ce qu'aucune clé mécanique perdue ne permet.</p>
+          <p><strong>Le code PIN peut être deviné — en théorie.</strong> Essayer tous les codes à six chiffres, c'est un million de combinaisons&nbsp;: infaisable à la main, mais l'idée inquiète. Sauf qu'une serrure sérieuse ne se laisse pas faire. Après plusieurs saisies erronées d'affilée, elle <strong>se bloque quelques minutes</strong> et déclenche une alerte. Ce verrouillage temporaire transforme un million d'essais en années d'acharnement devant une porte, alarme comprise. Le brute-force n'est pas un risque réaliste.</p>
+          <p>La vraie menace sur le code est beaucoup plus prosaïque&nbsp;: <strong>on vous regarde le taper</strong>, ou les traces de doigts trahissent les quatre touches utilisées. D'où une fonction trop peu connue et qu'il faut prendre l'habitude d'utiliser&nbsp;: le <strong>code leurre</strong> (ou «&nbsp;mot de passe virtuel&nbsp;»). Vous tapez une série de chiffres au hasard <em>avant</em> et <em>après</em> votre vrai code — la serrure retrouve la bonne séquence à l'intérieur et ouvre. Résultat&nbsp;: l'observateur ne voit qu'une bouillie de chiffres, et les traces sur le clavier ne veulent plus rien dire. C'est gratuit, ça prend deux secondes, et ça neutralise la principale attaque du quotidien.</p>
+
+          <aside class="article-cta">
+            <p><strong>Un doute sur la sécurité d'un modèle en particulier&nbsp;?</strong></p>
+            <p>Posez-nous la question directement, on répond sans détour&nbsp;:</p>
+            <a href="https://wa.me/212720889310?text=Bonjour%2C%20je%20me%20pose%20des%20questions%20sur%20la%20s%C3%A9curit%C3%A9%20d%27une%20serrure%20connect%C3%A9e%20(piratage%2C%20code%2C%20badge)." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.49 0 .16 5.34.16 11.89c0 2.09.55 4.14 1.59 5.94L0 24l6.3-1.65a11.87 11.87 0 005.69 1.45h.01c6.55 0 11.88-5.34 11.89-11.89a11.82 11.82 0 00-3.47-8.43zM12 21.3c-1.78 0-3.52-.48-5.04-1.39l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 01-1.51-5.27c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.98 2.89a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.18-1.42-.08-.12-.27-.2-.57-.35z" /></svg>Contactez-nous sur WhatsApp</a>
+          </aside>
+
+          <h2 id="s-4">WiFi ou Bluetooth : ce que ça change pour la sécurité</h2>
+          <p>Question fréquente&nbsp;: une serrure en Bluetooth est-elle plus sûre qu'une serrure en WiFi&nbsp;? Techniquement, la surface d'exposition n'est pas la même, mais la conclusion pratique surprend.</p>
+          <p>En <strong>Bluetooth</strong>, la portée se compte en mètres. Pour tenter quoi que ce soit, il faut être physiquement devant votre porte — ce qui, disons-le, décrit déjà un cambrioleur classique. En contrepartie, pas de pilotage à distance&nbsp;: vous ne pouvez ni ouvrir ni créer un code depuis l'extérieur.</p>
+          <p>En <strong>WiFi</strong>, la serrure dialogue avec le cloud, donc elle est joignable de partout — pour vous. Cela n'en fait pas pour autant une cible exposée, puisque, on l'a vu, la connexion est <em>sortante</em> et chiffrée&nbsp;: il n'y a pas de service en écoute sur lequel frapper.</p>
+          <p>Ce qui compte davantage que ce choix, c'est <strong>l'hygiène de votre box Internet</strong>&nbsp;: un mot de passe WiFi qui n'est plus celui collé sous le routeur, un chiffrement WPA2 ou WPA3 activé, et si votre box le permet, un réseau invité dédié aux objets connectés. Et si votre inquiétude porte plutôt sur ce qui continue de fonctionner quand la connexion tombe, tout est expliqué dans notre article sur <a href="/blog/serrure-electronique-sans-wifi.html">la serrure électronique sans WiFi</a>.</p>
+
+          <h2 id="s-5">Reconnaissance faciale : pourquoi c'est le plus dur à contourner</h2>
+          <p>Reprenons les faiblesses listées plus haut&nbsp;: un code s'observe, un badge se clone, une clé se perd. Toutes ont un point commun — <strong>ce sont des objets ou des séquences qui existent en dehors de vous</strong>, donc copiables. La reconnaissance faciale casse cette logique&nbsp;: il n'y a rien à taper, rien à sortir de sa poche, rien à égarer. Rien à voler, donc.</p>
+          <p>Encore faut-il que le module soit sérieux. Sur la <a href="/serrure-futurelock-maroc.html">FutureLock</a>, la reconnaissance ne se contente pas de comparer une image&nbsp;: elle <strong>analyse le relief du visage à l'infrarouge</strong>. Une photo imprimée ou affichée sur un écran est plate&nbsp;; elle est rejetée. Bénéfice secondaire&nbsp;: la reconnaissance <strong>fonctionne dans le noir</strong>. L'empreinte du visage est enregistrée <strong>dans la serrure</strong>, pas baladée sur Internet.</p>
+          <p>Il y a enfin un effet rarement mentionné&nbsp;: la reconnaissance faciale ouvre en <strong>moins d'une seconde, sans que vous touchiez le clavier</strong>. Donc plus de code tapé devant un voisin, plus de traces de doigts, plus de séquence à mémoriser pour les enfants. La faille la plus courante — l'observation — disparaît simplement parce qu'il n'y a plus rien à observer.</p>
+          <p>La FutureLock ajoute par-dessus un <strong>visiophone intégré</strong>&nbsp;: vous voyez qui se présente à votre porte, et le passage est horodaté — un visiteur filmé est un visiteur dissuadé. Et si besoin, les méthodes de secours restent là&nbsp;: empreinte, code, badge et clé mécanique. C'est la combinaison que nous recommandons quand la sécurité est la préoccupation principale&nbsp;: ne rien exposer au quotidien, tout en gardant plusieurs portes de sortie. Nos installations incluent la pose et la configuration complète — codes d'usine changés, accès nommés, notifications réglées avec vous. Le détail des modèles et des zones d'intervention est sur www.elactronics.ma.</p>
+
+          <aside class="article-cta">
+            <p><strong>Envie de la solution la plus difficile à contourner&nbsp;?</strong></p>
+            <p>La <a href="/serrure-futurelock-maroc.html">FutureLock</a> cumule reconnaissance faciale, visiophone et chiffrement Tuya, installation et configuration comprises. Parlons-en&nbsp;:</p>
+            <a href="https://wa.me/212720889310?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20FutureLock%20et%20son%20niveau%20de%20s%C3%A9curit%C3%A9." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.49 0 .16 5.34.16 11.89c0 2.09.55 4.14 1.59 5.94L0 24l6.3-1.65a11.87 11.87 0 005.69 1.45h.01c6.55 0 11.88-5.34 11.89-11.89a11.82 11.82 0 00-3.47-8.43zM12 21.3c-1.78 0-3.52-.48-5.04-1.39l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 01-1.51-5.27c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.98 2.89a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.18-1.42-.08-.12-.27-.2-.57-.35z" /></svg>Contactez-nous sur WhatsApp</a>
+          </aside>
+
+          <h2 id="s-6">Questions fréquentes</h2>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Quelqu'un peut-il ouvrir ma serrure connectée à distance depuis Internet&nbsp;?</button>
+            <div class="faq-answer"><p>En pratique, non — pas en s'attaquant à la serrure elle-même. La serrure n'attend aucune connexion entrante&nbsp;: c'est elle qui contacte le serveur, par un canal chiffré. Le seul chemin réaliste, c'est votre compte Tuya. Avec un mot de passe fort et unique, non réutilisé ailleurs, ce chemin se referme.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Mon badge RFID peut-il être copié&nbsp;?</button>
+            <div class="faq-answer"><p>Un badge basse fréquence non chiffré, oui&nbsp;: un duplicateur du commerce suffit, s'il a le badge en main quelques secondes. C'est pour cela que le badge doit rester un confort, jamais votre seule protection&nbsp;: ne le laissez pas dans la boîte aux lettres ou la voiture, et supprimez immédiatement un badge perdu depuis l'application.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Une photo peut-elle tromper la reconnaissance faciale&nbsp;?</button>
+            <div class="faq-answer"><p>Pas sur un module sérieux. La FutureLock ne compare pas une image plate&nbsp;: elle analyse le relief du visage à l'infrarouge, ce qui lui permet aussi de fonctionner dans le noir. Une photo sur écran ou sur papier n'a aucun relief&nbsp;: elle est rejetée.</p></div>
+          </div>
+        </div>
+
+        <section class="article-related">
+          <h2>À lire aussi</h2>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <a class="blog-card-media" href="/blog/serrure-electronique-sans-wifi.html" aria-label="Une serrure électronique fonctionne-t-elle sans WiFi ?">
+                <img src="/images/serrure-electronique-maroc.webp" width="600" height="338" alt="Serrure électronique fonctionnant sans connexion WiFi au Maroc" loading="lazy" />
+              </a>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <time datetime="2026-07-19">19 juillet 2026</time>
+                  <span>5 min de lecture</span>
+                </div>
+                <h3><a href="/blog/serrure-electronique-sans-wifi.html">Une serrure électronique fonctionne-t-elle sans WiFi ?</a></h3>
+                <p class="blog-card-excerpt">Code, empreinte, reconnaissance faciale, RFID : ce qui continue de fonctionner sans connexion, et à quoi sert vraiment le WiFi.</p>
+                <a class="blog-card-link" href="/blog/serrure-electronique-sans-wifi.html">Lire l'article &rarr;</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <a class="blog-card-media" href="/blog/serrure-connectee-airbnb-maroc.html" aria-label="Serrure connectée pour Airbnb au Maroc : gérer les accès à distance">
+                <img src="/images/serrure-electronique-futurelock-maroc.webp" width="600" height="338" alt="Serrure connectée FutureLock pour location Airbnb au Maroc" loading="lazy" />
+              </a>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <time datetime="2026-07-19">19 juillet 2026</time>
+                  <span>6 min de lecture</span>
+                </div>
+                <h3><a href="/blog/serrure-connectee-airbnb-maroc.html">Serrure connectée pour Airbnb au Maroc : gérer les accès à distance</a></h3>
+                <p class="blog-card-excerpt">Codes invités temporaires, déverrouillage à distance, check-in autonome : ce qu'une serrure connectée change pour la location courte durée.</p>
+                <a class="blog-card-link" href="/blog/serrure-connectee-airbnb-maroc.html">Lire l'article &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-links">
+      <a href="/index.html">Accueil</a> |
+      <a href="/casablanca.html">Casablanca</a> |
+      <a href="/bouznika.html">Bouznika</a> |
+      <a href="/rabat.html">Rabat</a> |
+      <a href="/marrakech.html">Marrakech</a> |
+      <a href="/meknes.html">Meknès</a> |
+      <a href="/tanger.html">Tanger</a> |
+      <a href="/agadir.html">Agadir</a> |
+      <a href="/fes.html">Fès</a> |
+      <a href="/sale.html">Salé</a> |
+      <a href="/kenitra.html">Kénitra</a> |
+      <a href="/mohammedia.html">Mohammedia</a> |
+      <a href="/temara.html">Témara</a> |
+      <a href="/zones-couvertes.html">Toutes nos zones</a>
+    </div>
+    <div class="footer-links" style="margin-top: 0.4rem;">
+      <a href="/blog/">Blog</a> |
+      <a href="/a-propos.html">À propos</a> |
+      <a href="/faq.html">FAQ</a> |
+      <a href="/prix-serrure-electronique-maroc.html">Prix</a> |
+      <a href="/meilleure-serrure-electronique-maroc.html">Comparatif</a> |
+      <a href="/serrure-electronique-fiable.html">Fiabilité</a> |
+      <a href="/travailler-avec-nous.html">Travailler avec nous</a>
+    </div>
+    <div class="footer-links" style="margin-top: 0.4rem;">
+      <a href="/mentions-legales.html">Mentions légales</a> |
+      <a href="/cgv.html">CGV</a> |
+      <a href="/politique-confidentialite.html">Confidentialité</a>
+    </div>
+    <p>&copy; <span id="year"></span> Elactronics &ndash; Serrures électroniques intelligentes au Maroc</p>
+  </div>
+</footer>
+
+  <script>
+    let trackingLoaded = false;
+
+    function loadTracking() {
+      if (trackingLoaded) return;
+      trackingLoaded = true;
+
+      const gaScript = document.createElement('script');
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YG9P3FXJX9';
+      gaScript.async = true;
+      document.head.appendChild(gaScript);
+
+      gaScript.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-YG9P3FXJX9');
+      };
+
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}
+      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1981751045765597');
+      fbq('track', 'PageView');
+    }
+
+    ['click','scroll','mousemove','touchstart'].forEach(function(e){
+      window.addEventListener(e, loadTracking, { once:true, passive:true });
+    });
+
+    setTimeout(loadTracking, 3000);
+  </script>
+
+  <script src="/script.js?v=20260711" defer></script>
+</body>
+</html>
