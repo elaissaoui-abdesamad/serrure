@@ -185,9 +185,16 @@
 
   <url>
     <loc>https://elactronics.ma/blog/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://elactronics.ma/blog/comment-choisir-serrure-connectee.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
 
   <url>
